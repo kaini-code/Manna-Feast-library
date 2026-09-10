@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manna Feast Digital Library</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-glow glow-one"></div>
+  <div class="page-glow glow-two"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-wrap">
+        <div class="brand-badge">
+          <img src="covers/church-logo.png" alt="Church Logo">
+        </div>
+        <div class="brand-text">
+          <p class="mini-label">DIGITAL ARCHIVE</p>
+          <h1>Jesus Evangelistic Bible Ministry International </h1>
+          <p class="sub-brand">Manna Feast Digital Library</p>
+        </div>
+      </div>
+
+      <nav class="top-nav">
+        <a href="#home">Home</a>
+        <a href="#archive">Archive</a>
+      </nav>
+    </div>
+    <div class="theme-picker">
+  <span>Reading theme:</span>
+  <button data-theme="forest">Forest</button>
+  <button data-theme="cream">Warm Cream</button>
+  <button data-theme="blue">Soft Blue</button>
+</div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text-block">
+        <p class="eyebrow">CALM READING ENVIRONMENT • MONTHLY PUBLICATIONS • EASY ACCESS</p>
+        <h2>Preserving each Manna Feast issue in one peaceful reading space.</h2>
+        <p class="hero-description">
+          This digital library is designed to keep the ministry's monthly publications
+          accessible, organized, and easy to revisit by year and month.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#archive" class="button primary">Browse Archives</a>
+          <a href="#how-to-add" class="button secondary">Learn How to Add More</a>
+        </div>
+
+        <div class="hero-notes">
+          <div class="note-card">
+            <strong>Simple</strong>
+            <span>Open a year, choose a month, and read.</span>
+          </div>
+          <div class="note-card">
+            <strong>Expandable</strong>
+            <span>New issues can be added month by month later.</span>
+          </div>
+          <div class="note-card">
+            <strong>Calm Design</strong>
+            <span>Soft colours and a library-style layout for reading.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-preview">
+  <div class="preview-card">
+
+    <img
+      id="featuredCover"
+      src="covers/manna-feast-2026-may-cover.jpg"
+      alt="Featured Manna Feast issue"
+    >
+
+    <div class="preview-copy">
+      <p class="preview-tag">Featured Issue</p>
+
+      <h3 id="featuredTitle">
+        Manna Feast — May 2026
+      </h3>
+
+      <p id="featuredDescription">
+        Monthly Manna Feast publication.
+      </p>
+    </div>
+
+  </div>
+</div>
+    </section>
+
+    <section class="control-panel">
+      <div class="control-card">
+        <div>
+          <p class="mini-label">QUICK FIND</p>
+          <h3>Find an issue</h3>
+        </div>
+
+        <div class="filters">
+          <input type="text" id="searchInput" placeholder="Search by month or year">
+          <select id="yearSelect" aria-label="Filter by year"></select>
+        </div>
+      </div>
+    </section>
+
+    <section class="archive-section" id="archive">
+      <div class="section-title-row">
+        <div>
+          <p class="mini-label">ARCHIVE SHELF</p>
+          <h2>Browse the archive</h2>
+          <p class="section-description">
+            This shelf can eventually hold every month from your archive. For now,
+            it includes two working sample issues and is ready for more.
+          </p>
+        </div>
+      </div>
+
+      <div class="year-chip-row" id="yearChipRow"></div>
+
+      <div id="resultInfo" class="result-info"></div>
+      <div id="cardsGrid" class="cards-grid"></div>
+      <div id="emptyState" class="empty-state hidden">
+        <h3>No issues found</h3>
+        <p>This year or search does not have any added issues yet. You can add them later in the publication list.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Manna Feast Digital Library</p>
+    <p>Jesus Evangelistic Bible Ministry International</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

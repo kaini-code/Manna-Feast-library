@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1100" viewBox="0 0 800 1100">
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#16372f"/>
+        <stop offset="55%" stop-color="#3c6b58"/>
+        <stop offset="100%" stop-color="#c9b07c"/>
+      </linearGradient>
+    </defs>
+    <rect width="800" height="1100" fill="url(#bg)"/>
+    <rect x="40" y="40" width="720" height="1020" rx="32" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+    <text x="400" y="140" text-anchor="middle" fill="#f8f3ea" font-size="28" font-family="Georgia">JESUS EVANGELISTIC BIBLE MINISTRY INTERNATIONAL</text>
+    <text x="400" y="240" text-anchor="middle" fill="#f8f3ea" font-size="40" font-family="Georgia">Your Monthly</text>
+    <text x="400" y="340" text-anchor="middle" fill="#ffffff" font-size="84" font-family="Georgia" font-weight="700">Manna Feast</text>
+    <text x="400" y="510" text-anchor="middle" fill="#e9d8b5" font-size="72" font-family="Arial" font-weight="700">MANNA</text>
+    <text x="400" y="590" text-anchor="middle" fill="#ffffff" font-size="88" font-family="Arial" font-weight="700">FEAST</text>
+    <text x="400" y="710" text-anchor="middle" fill="#f8f3ea" font-size="28" font-family="Arial">Cover page to be added</text>
+    <text x="400" y="990" text-anchor="middle" fill="#f3e7d1" font-size="22" font-family="Arial">Digital Library Cover Preview</text>
+    </svg>
