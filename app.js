@@ -1530,3 +1530,110 @@ showFeaturedIssue();
 
 // Change issue every 30 seconds
 setInterval(showFeaturedIssue, 30000);
+
+// HOME SCRIPTURE WIDGET — APPROVED HOMEPAGE
+const homeScriptures = [
+  {
+    text: '“Man shall not live by bread alone, but by every word that proceedeth out of the mouth of God.”',
+    reference: 'Matthew 4:4 (KJV)'
+  },
+  {
+    text: '“Thy word is a lamp unto my feet, and a light unto my path.”',
+    reference: 'Psalm 119:105 (KJV)'
+  },
+  {
+    text: '“Thy word have I hid in mine heart, that I might not sin against thee.”',
+    reference: 'Psalm 119:11 (KJV)'
+  },
+  {
+    text: '“This book of the law shall not depart out of thy mouth; but thou shalt meditate therein day and night, that thou mayest observe to do according to all that is written therein: for then thou shalt make thy way prosperous, and then thou shalt have good success.”',
+    reference: 'Joshua 1:8 (KJV)'
+  },
+  {
+    text: '“For the word of God is quick, and powerful, and sharper than any twoedged sword, piercing even to the dividing asunder of soul and spirit, and of the joints and marrow, and is a discerner of the thoughts and intents of the heart.”',
+    reference: 'Hebrews 4:12 (KJV)'
+  },
+  {
+    text: '“But be ye doers of the word, and not hearers only, deceiving your own selves.”',
+    reference: 'James 1:22 (KJV)'
+  }
+];
+
+const scriptureWidget = document.getElementById('scriptureWidget');
+
+if (scriptureWidget) {
+  const scriptureText = document.getElementById('scriptureText');
+  const scriptureReference = document.getElementById('scriptureReference');
+  const scriptureDots = document.getElementById('scriptureDots');
+  const scriptureStage = scriptureWidget.querySelector('.scripture-stage');
+
+  let scriptureIndex = 0;
+  let scriptureTimer = null;
+  let scriptureResumeTimer = null;
+
+  function buildScriptureDots() {
+    scriptureDots.innerHTML = '';
+
+    homeScriptures.forEach((_, index) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'scripture-dot';
+      dot.setAttribute('aria-label', `Show scripture ${index + 1}`);
+
+      dot.addEventListener('click', () => {
+        pauseScriptureRotation();
+        showScripture(index);
+      });
+
+      scriptureDots.appendChild(dot);
+    });
+  }
+
+  function showScripture(index) {
+    scriptureStage.classList.add('is-fading');
+
+    setTimeout(() => {
+      scriptureIndex = (index + homeScriptures.length) % homeScriptures.length;
+      scriptureText.textContent = homeScriptures[scriptureIndex].text;
+      scriptureReference.textContent = `— ${homeScriptures[scriptureIndex].reference}`;
+
+      document.querySelectorAll('.scripture-dot').forEach((dot, dotIndex) => {
+        dot.classList.toggle('active', dotIndex === scriptureIndex);
+      });
+
+      scriptureStage.classList.remove('is-fading');
+    }, 180);
+  }
+
+  function startScriptureRotation() {
+    clearInterval(scriptureTimer);
+    scriptureTimer = setInterval(() => {
+      showScripture(scriptureIndex + 1);
+    }, 30000);
+  }
+
+  function pauseScriptureRotation() {
+    clearInterval(scriptureTimer);
+    clearTimeout(scriptureResumeTimer);
+    scriptureResumeTimer = setTimeout(startScriptureRotation, 45000);
+  }
+
+  document.getElementById('scripturePrev').addEventListener('click', () => {
+    pauseScriptureRotation();
+    showScripture(scriptureIndex - 1);
+  });
+
+  document.getElementById('scriptureNext').addEventListener('click', () => {
+    pauseScriptureRotation();
+    showScripture(scriptureIndex + 1);
+  });
+
+  scriptureWidget.addEventListener('mouseenter', () => clearInterval(scriptureTimer));
+  scriptureWidget.addEventListener('mouseleave', startScriptureRotation);
+  scriptureWidget.addEventListener('focusin', () => clearInterval(scriptureTimer));
+  scriptureWidget.addEventListener('focusout', startScriptureRotation);
+
+  buildScriptureDots();
+  showScripture(0);
+  startScriptureRotation();
+}
