@@ -265,6 +265,42 @@ const publications = [
     available: true
   },
   {
+    title: 'Manna Feast — September 2024',
+    month: 'September',
+    year: 2024,
+    cover: 'covers/manna-feast-2024-september-cover.jpg',
+    pdf: 'pdfs/manna-feast-september-2024.pdf',
+    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
+    available: true
+  },
+  {
+    title: 'Manna Feast — October 2024',
+    month: 'October',
+    year: 2024,
+    cover: 'covers/manna-feast-2024-october-cover.jpg',
+    pdf: 'pdfs/manna-feast-october-2024.pdf',
+    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
+    available: true
+  },
+  {
+    title: 'Manna Feast — November 2024',
+    month: 'November',
+    year: 2024,
+    cover: 'covers/manna-feast-2024-november-cover.jpg',
+    pdf: 'pdfs/manna-feast-november-2024.pdf',
+    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
+    available: true
+  },
+  {
+    title: 'Manna Feast — December 2024',
+    month: 'December',
+    year: 2024,
+    cover: 'covers/manna-feast-2024-december-cover.jpg',
+    pdf: 'pdfs/manna-feast-december-2024.pdf',
+    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
+    available: true
+  },
+  {
     title: 'Manna Feast — January 2023',
     month: 'January',
     year: 2023,
@@ -1345,15 +1381,7 @@ const publications = [
     description: 'Sample live issue included in this starter library. Read online or download the PDF.',
     available: true
   },
-  {
-    title: 'Manna Feast — Future or Recovered Issue',
-    month: 'Add Month',
-    year: 2024,
-    cover: 'covers/placeholder.svg',
-    pdf: '#',
-    description: 'Use this as a model while adding more recovered publications and cover images later.',
-    available: false
-  }
+  
 ];
 
 const searchInput = document.getElementById('searchInput');
