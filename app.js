@@ -2164,43 +2164,51 @@ function openReader(issue) {
     !issue ||
     !issue.pdfAvailable
   ) {
-
     return;
-
   }
 
-
-  currentReadingIssue =
-    issue;
-
+  currentReadingIssue = issue;
 
   localStorage.setItem(
     'mannaLastRead',
     issue.key
   );
 
+  const isMobile =
+    window.innerWidth <= 860;
+
+  if (isMobile) {
+
+    window.open(
+      issue.pdf,
+      '_blank'
+    );
+
+    return;
+  }
 
   readerTitle.textContent =
     issueDate(issue);
 
-
   readerTheme.textContent =
     issue.description || '';
 
-
   pdfReader.src =
     issue.pdf;
-
 
   readingEmpty.classList.add(
     'hidden'
   );
 
-
   readerShell.classList.remove(
     'hidden'
   );
 
+  updateReaderFavoriteButton();
+
+  window.location.hash =
+    'reading';
+}
 
   updateReaderFavoriteButton();
 
