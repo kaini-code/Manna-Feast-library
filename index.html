@@ -3,204 +3,808 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Manna Feast Digital Library - Jesus Evangelistic Bible Ministry International"
+  >
+
   <title>Manna Feast Digital Library</title>
+
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-  <div class="page-glow glow-one"></div>
-  <div class="page-glow glow-two"></div>
+<body class="theme-forest">
 
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="brand-wrap">
-        <div class="brand-badge">
-          <img src="covers/church-logo.png" alt="Church Logo">
-        </div>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-        <div class="brand-text">
-          <p class="mini-label">DIGITAL ARCHIVE</p>
-          <h1>Jesus Evangelistic Bible Ministry International</h1>
-          <p class="sub-brand">Manna Feast Digital Library</p>
-        </div>
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-brand">
+      <img
+        src="covers/church-logo.png"
+        alt="Jesus Evangelistic Bible Ministry International logo"
+      >
+
+      <div class="sidebar-brand-text">
+        <h2>Manna Feast</h2>
+        <p>DIGITAL LIBRARY</p>
+      </div>
+    </div>
+
+    <button
+      class="sidebar-collapse"
+      id="sidebarCollapseButton"
+      type="button"
+      aria-label="Collapse sidebar"
+    >
+      ‹
+    </button>
+
+    <nav class="sidebar-nav" aria-label="Main navigation">
+
+      <a href="#home" data-nav="home" class="active">
+        <span class="nav-icon">⌂</span>
+        <span class="nav-text">Home</span>
+      </a>
+
+      <a href="#library" data-nav="library">
+        <span class="nav-icon">▤</span>
+        <span class="nav-text">Manna Feast Library</span>
+      </a>
+
+      <a href="#archive" data-nav="archive">
+        <span class="nav-icon">▣</span>
+        <span class="nav-text">Archive</span>
+      </a>
+
+      <a href="#search" data-nav="search">
+        <span class="nav-icon">⌕</span>
+        <span class="nav-text">Search</span>
+      </a>
+
+      <a href="#favorites" data-nav="favorites">
+        <span class="nav-icon">♡</span>
+        <span class="nav-text">Favorite Books</span>
+      </a>
+
+      <a href="#reading" data-nav="reading">
+        <span class="nav-icon">▦</span>
+        <span class="nav-text">Reading</span>
+      </a>
+
+      <a href="#settings" data-nav="settings">
+        <span class="nav-icon">⚙</span>
+        <span class="nav-text">Reading Settings</span>
+      </a>
+
+      <a href="#about" data-nav="about">
+        <span class="nav-icon">ⓘ</span>
+        <span class="nav-text">About the Ministry</span>
+      </a>
+
+    </nav>
+
+    <div class="sidebar-quote">
+      <p>“Read. Reflect. Grow in the Word.”</p>
+    </div>
+
+  </aside>
+
+
+  <!-- TOP HEADER -->
+  <header class="top-header">
+
+    <button
+      class="menu-button"
+      id="menuButton"
+      type="button"
+      aria-label="Open navigation menu"
+    >
+      ☰
+    </button>
+
+    <div class="top-ministry-name">
+
+      <img
+        src="covers/church-logo.png"
+        alt=""
+      >
+
+      <div>
+        <strong>
+          Jesus Evangelistic Bible Ministry International
+        </strong>
+
+        <span>
+          Manna Feast Digital Library
+        </span>
       </div>
 
-      <nav class="top-nav">
-        <a href="#home">Home</a>
-        <a href="#archive">Archive</a>
-      </nav>
     </div>
 
-    <div class="theme-picker">
-      <span>Reading theme:</span>
-      <button type="button" data-theme="forest">Forest</button>
-      <button type="button" data-theme="cream">Warm Cream</button>
-      <button type="button" data-theme="blue">Soft Blue</button>
-    </div>
+
   </header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-text-block">
-        <div class="ministry-identity">
-          <p class="ministry-full-name">
+
+  <div class="site-content">
+
+    <main>
+
+      <!-- ===============================
+           HOME PAGE
+           =============================== -->
+      <section class="app-page active-page" data-page="home">
+
+        <section class="library-hero">
+
+          <div class="hero-background"></div>
+          <div class="hero-overlay"></div>
+
+          <div class="hero-content">
+
+            <div class="hero-left">
+
+              <p class="hero-kicker">
+                A publication of Jesus Evangelistic Bible Ministry International
+              </p>
+
+              <h1>
+                Manna Feast
+                <span>Digital Library</span>
+              </h1>
+
+              <p class="hero-intro">
+                Explore. Read. Reflect. Grow in the Word.
+              </p>
+
+              <form class="hero-quick-find" id="homeSearchForm">
+
+                <label for="homeSearchInput">
+                  Find an Issue
+                </label>
+
+                <div class="hero-search-row">
+
+                  <input
+                    type="search"
+                    id="homeSearchInput"
+                    placeholder="Search by month, year or keyword..."
+                  >
+
+                  <button type="submit">
+                    Search
+                  </button>
+
+                </div>
+
+              </form>
+
+            </div>
+
+
+            <aside
+              class="journey-card"
+              id="scriptureWidget"
+              aria-live="polite"
+            >
+
+              <p class="journey-label">
+                WORD FOR THE JOURNEY
+              </p>
+
+              <blockquote id="scriptureText"></blockquote>
+
+              <p id="scriptureReference"></p>
+
+            </aside>
+
+          </div>
+
+        </section>
+
+
+        <!-- FEATURED -->
+        <section class="home-section">
+
+          <div class="section-heading">
+
+            <div>
+              <p class="section-kicker">
+                FROM THE MANNA FEAST LIBRARY
+              </p>
+
+              <h2>Featured Manna Feast</h2>
+            </div>
+
+          </div>
+
+
+          <article
+            class="featured-card"
+            id="featuredCard"
+            aria-live="polite"
+          >
+
+            <div class="featured-cover-wrap">
+
+              <img
+                id="featuredCover"
+                src=""
+                alt=""
+              >
+
+              <div
+                class="cover-placeholder"
+                id="featuredCoverPlaceholder"
+              >
+                <strong>Manna Feast</strong>
+                <span>Cover coming soon</span>
+              </div>
+
+            </div>
+
+
+            <div class="featured-copy">
+
+              <p class="featured-brand">
+                MANNA FEAST
+              </p>
+
+              <h3
+                class="featured-theme"
+                id="featuredTheme"
+              ></h3>
+
+              <p
+                class="featured-date"
+                id="featuredDate"
+              ></p>
+
+              <p class="featured-description">
+                Read this Manna Feast issue online or download the PDF.
+              </p>
+
+              <div class="featured-actions">
+
+                <button
+                  class="primary-button"
+                  id="featuredReadButton"
+                  type="button"
+                >
+                  Read Online
+                </button>
+
+                <button
+                  class="secondary-button"
+                  id="featuredDownloadButton"
+                  type="button"
+                >
+                  Download PDF
+                </button>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </section>
+
+
+        <!-- RECENT ISSUES -->
+        <section class="home-section">
+
+          <div class="section-heading">
+
+            <div>
+              <p class="section-kicker">
+                CONTINUE EXPLORING
+              </p>
+
+              <h2>Recent Issues</h2>
+            </div>
+
+            <a href="#library" class="text-link">
+              View All
+            </a>
+
+          </div>
+
+          <div
+            class="recent-grid"
+            id="recentIssuesGrid"
+          ></div>
+
+        </section>
+
+
+        <!-- ARCHIVE CALLOUT -->
+        <section class="home-section">
+
+          <div class="archive-callout">
+
+            <div>
+
+              <p class="section-kicker light">
+                EXPLORE BY YEAR
+              </p>
+
+              <h2>
+                Many Issues.<br>
+                One Purpose.<br>
+                A Stronger You in Christ.
+              </h2>
+
+              <p>
+                Browse available Manna Feast publications by year and month.
+              </p>
+
+              <a
+                href="#archive"
+                class="gold-button"
+              >
+                Browse the Archive
+              </a>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </section>
+
+
+      <!-- ===============================
+           LIBRARY PAGE
+           =============================== -->
+      <section class="app-page" data-page="library">
+
+        <div class="page-intro">
+
+          <p class="section-kicker">
+            DIGITAL SHELF
+          </p>
+
+          <h1>Manna Feast Library</h1>
+
+          <p>
+            Browse and read all available issues.
+          </p>
+
+        </div>
+
+
+        <div class="filter-panel">
+
+          <input
+            type="search"
+            id="librarySearch"
+            placeholder="Search issues..."
+          >
+
+          <select id="libraryYear">
+            <option value="">All years</option>
+          </select>
+
+          <select id="libraryMonth">
+            <option value="">All months</option>
+          </select>
+
+        </div>
+
+
+        <div
+          class="issue-grid"
+          id="libraryGrid"
+        ></div>
+
+        <div
+          class="empty-state hidden"
+          id="libraryEmpty"
+        >
+          <h3>No publications found</h3>
+          <p>Try another month, year or search.</p>
+        </div>
+
+      </section>
+
+
+      <!-- ===============================
+           ARCHIVE PAGE
+           =============================== -->
+      <section class="app-page" data-page="archive">
+
+        <div class="page-intro">
+
+          <p class="section-kicker">
+            MANNA FEAST COLLECTION
+          </p>
+
+          <h1>Archive</h1>
+
+          <p>
+            Browse by year and month.
+          </p>
+
+        </div>
+
+        <div
+          class="archive-years"
+          id="archiveYears"
+        ></div>
+
+      </section>
+
+
+      <!-- ===============================
+           SEARCH PAGE
+           =============================== -->
+      <section class="app-page" data-page="search">
+
+        <div class="page-intro">
+
+          <p class="section-kicker">
+            FIND A PUBLICATION
+          </p>
+
+          <h1>Search</h1>
+
+          <p>
+            Search by month, year or monthly theme.
+          </p>
+
+        </div>
+
+
+        <form
+          class="large-search"
+          id="searchPageForm"
+        >
+
+          <input
+            type="search"
+            id="searchPageInput"
+            placeholder="Search Manna Feast..."
+          >
+
+          <button type="submit">
+            Search
+          </button>
+
+        </form>
+
+
+        <div
+          class="issue-grid"
+          id="searchResults"
+        ></div>
+
+        <div
+          class="empty-state hidden"
+          id="searchEmpty"
+        >
+          <h3>No results found</h3>
+          <p>Try another month, year or keyword.</p>
+        </div>
+
+      </section>
+
+
+      <!-- ===============================
+           FAVORITES PAGE
+           =============================== -->
+      <section class="app-page" data-page="favorites">
+
+        <div class="page-intro">
+
+          <p class="section-kicker">
+            YOUR SAVED READING
+          </p>
+
+          <h1>Favorite Books</h1>
+
+          <p>
+            Publications you save will appear here.
+          </p>
+
+        </div>
+
+
+        <div
+          class="issue-grid"
+          id="favoritesGrid"
+        ></div>
+
+
+        <div
+          class="empty-state"
+          id="favoritesEmpty"
+        >
+          <div class="empty-icon">♡</div>
+
+          <h3>No favorites yet</h3>
+
+          <p>
+            When you find a Manna Feast issue you want to keep,
+            tap the Favorite button.
+          </p>
+
+          <a href="#library" class="primary-link-button">
+            Browse the Library
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===============================
+           READING PAGE
+           =============================== -->
+      <section class="app-page reading-page" data-page="reading">
+
+        <div
+          class="reading-empty"
+          id="readingEmpty"
+        >
+
+          <div class="empty-icon">▦</div>
+
+          <h2>No publication open yet</h2>
+
+          <p>
+            Choose “Read Online” from the Library or Featured Manna Feast.
+          </p>
+
+          <a href="#library" class="primary-link-button">
+            Go to Library
+          </a>
+
+        </div>
+
+
+        <div
+          class="reader-shell hidden"
+          id="readerShell"
+        >
+
+          <div class="reader-toolbar">
+
+            <div>
+
+              <p class="section-kicker">
+                CURRENTLY READING
+              </p>
+
+              <h2 id="readerTitle">
+                Manna Feast
+              </h2>
+
+              <p id="readerTheme"></p>
+
+            </div>
+
+
+            <div class="reader-toolbar-actions">
+
+              <button
+                type="button"
+                id="readerFavoriteButton"
+                class="secondary-button"
+              >
+                ♡ Favorite
+              </button>
+
+              <a
+                href="#library"
+                class="secondary-link-button"
+              >
+                Back to Library
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <iframe
+            id="pdfReader"
+            class="pdf-reader"
+            title="Manna Feast PDF reader"
+          ></iframe>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===============================
+           SETTINGS PAGE
+           =============================== -->
+      <section class="app-page" data-page="settings">
+
+        <div class="page-intro">
+
+          <p class="section-kicker">
+            PERSONALIZE YOUR READING
+          </p>
+
+          <h1>Reading Settings</h1>
+
+          <p>
+            Choose the appearance that is most comfortable for you.
+          </p>
+
+        </div>
+
+
+        <div class="settings-grid">
+
+          <section class="settings-card">
+
+            <h2>Text Size</h2>
+
+            <p>
+              Adjust the size of website reading text.
+            </p>
+
+            <div class="setting-buttons">
+
+              <button
+                type="button"
+                data-font="small"
+              >
+                A−
+              </button>
+
+              <button
+                type="button"
+                data-font="normal"
+              >
+                A
+              </button>
+
+              <button
+                type="button"
+                data-font="large"
+              >
+                A+
+              </button>
+
+            </div>
+
+          </section>
+
+
+          <section class="settings-card">
+
+            <h2>Reading Theme</h2>
+
+            <p>
+              Your choice is remembered on this device.
+            </p>
+
+            <div class="theme-options">
+
+              <button type="button" data-theme="forest">
+                Forest
+              </button>
+
+              <button type="button" data-theme="cream">
+                Warm Cream
+              </button>
+
+              <button type="button" data-theme="blue">
+                Soft Blue
+              </button>
+
+              <button type="button" data-theme="navy">
+                Navy
+              </button>
+
+              <button type="button" data-theme="burgundy">
+                Burgundy
+              </button>
+
+              <button type="button" data-theme="gold">
+                Cream & Gold
+              </button>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===============================
+           ABOUT PAGE
+           =============================== -->
+      <section class="app-page" data-page="about">
+
+        <div class="page-intro">
+
+          <p class="section-kicker">
             JESUS EVANGELISTIC BIBLE MINISTRY INTERNATIONAL
           </p>
 
-          <h2 class="library-title">Manna Feast Digital Library</h2>
-        </div>
+          <h1>About the Ministry</h1>
 
-        <p class="hero-tagline">Read. Reflect. Grow in the Word.</p>
-
-        <p class="hero-description">
-          Welcome to the digital home of Manna Feast, a monthly publication of
-          Jesus Evangelistic Bible Ministry International. Explore each issue,
-          read at your own pace, and return anytime as you grow in God's Word.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#featured" class="button primary">READ THE LATEST ISSUE</a>
-          <a href="#archive" class="button secondary">EXPLORE THE ARCHIVE</a>
-        </div>
-      </div>
-
-      <div class="hero-side">
-        <aside class="scripture-widget" id="scriptureWidget" aria-label="Scripture for the journey">
-          <p class="scripture-widget-label">WORD FOR THE JOURNEY</p>
-
-          <div class="scripture-stage">
-            <blockquote id="scriptureText"></blockquote>
-            <p id="scriptureReference" class="scripture-reference"></p>
-          </div>
-
-          <div class="scripture-controls">
-            <button id="scripturePrev" class="scripture-arrow" type="button" aria-label="Previous scripture">‹</button>
-            <div id="scriptureDots" class="scripture-dots"></div>
-            <button id="scriptureNext" class="scripture-arrow" type="button" aria-label="Next scripture">›</button>
-          </div>
-        </aside>
-
-        <div class="hero-preview" id="featured">
-          <div class="preview-card">
-            <img
-              id="featuredCover"
-              src="covers/manna-feast-2026-may-cover.jpg"
-              alt="Featured Manna Feast issue"
-            >
-
-            <div class="preview-copy">
-              <p class="preview-tag">Featured Issue</p>
-
-              <h3 id="featuredTitle">
-                Manna Feast — May 2026
-              </h3>
-
-              <p id="featuredDescription">
-                Monthly Manna Feast publication.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="control-panel">
-      <div class="control-card">
-        <div>
-          <p class="mini-label">QUICK FIND</p>
-          <h3>Find an issue</h3>
-        </div>
-
-        <div class="filters">
-          <input type="text" id="searchInput" placeholder="Search by month or year">
-          <select id="yearSelect" aria-label="Filter by year"></select>
-        </div>
-      </div>
-    </section>
-
-    <section class="archive-section" id="archive">
-      <div class="section-title-row">
-        <div>
-          <p class="mini-label">ARCHIVE SHELF</p>
-          <h2>Browse the archive</h2>
-          <p class="section-description">
-            Browse the Manna Feast library by year and month. More cover pages
-            and PDF issues can be added to the existing publication list as they become available.
+          <p>
+            Ministry information will be added here.
           </p>
-        </div>
-      </div>
 
-      <div class="year-chip-row" id="yearChipRow"></div>
-
-      <div id="resultInfo" class="result-info"></div>
-      <div id="cardsGrid" class="cards-grid"></div>
-
-      <div id="emptyState" class="empty-state hidden">
-        <h3>No issues found</h3>
-        <p>
-          This year or search does not have an added issue yet.
-          You can add the cover and PDF later.
-        </p>
-      </div>
-    </section>
-
-    <section class="bottom-purpose">
-      <div class="purpose-copy">
-        <p class="mini-label">WHY MANNA FEAST</p>
-        <h2>More Than a Publication</h2>
-        <p>
-          Manna Feast provides biblical teaching and spiritual nourishment for everyday Christian living.
-          Whether you are reading today's message or returning to an earlier edition, this digital library
-          makes each issue easy to find, read, and revisit.
-        </p>
-      </div>
-
-      <div class="benefit-grid">
-        <div class="benefit-item">
-          <div class="benefit-icon" aria-hidden="true">▣</div>
-          <strong>Read anytime</strong>
         </div>
 
-        <div class="benefit-item">
-          <div class="benefit-icon" aria-hidden="true">◷</div>
-          <strong>Grow spiritually</strong>
+
+        <div class="about-card">
+
+          <img
+            src="covers/church-logo.png"
+            alt="Jesus Evangelistic Bible Ministry International logo"
+          >
+
+          <div>
+
+            <h2>
+              Jesus Evangelistic Bible Ministry International
+            </h2>
+
+            <p>
+              This page has been prepared for the official ministry
+              information you will provide later.
+            </p>
+
+            <p>
+              No ministry history or contact details have been invented.
+            </p>
+
+          </div>
+
         </div>
 
-        <div class="benefit-item">
-          <div class="benefit-icon" aria-hidden="true">✦</div>
-          <strong>Be encouraged every day</strong>
-        </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer class="site-footer ministry-footer">
-    <div class="footer-main">
-      <div class="footer-ministry">
-        <img src="covers/church-logo.png" alt="Church Logo">
+    </main>
+
+
+    <footer class="site-footer">
+
+      <div class="footer-brand">
+
+        <img
+          src="covers/church-logo.png"
+          alt=""
+        >
 
         <div>
-          <h3>Jesus Evangelistic Bible Ministry International</h3>
-          <p>Equipping Believers • Transforming Lives</p>
+          <strong>
+            Jesus Evangelistic Bible Ministry International
+          </strong>
+
+          <span>
+            Manna Feast Digital Library
+          </span>
         </div>
+
       </div>
 
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <a href="#home">Home</a>
-        <a href="#featured">Manna Feast</a>
-        <a href="#archive">Archive</a>
-      </div>
-    </div>
+      <p>
+        © 2026 Jesus Evangelistic Bible Ministry International.
+        All rights reserved.
+      </p>
 
-    <div class="footer-gold-rule"></div>
+    </footer>
 
-    <div class="footer-bottom">
-      <span>© 2026 Jesus Evangelistic Bible Ministry International. All rights reserved.</span>
-      <em>Feeding God's People with His Word</em>
-    </div>
-  </footer>
+  </div>
+
 
   <script src="app.js"></script>
+
 </body>
 </html>

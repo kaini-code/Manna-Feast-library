@@ -1,1667 +1,2526 @@
+/* =========================================
+   MANNA FEAST DIGITAL LIBRARY
+   ========================================= */
 
-const currentYear = new Date().getFullYear();
 
-const publications = [
-  
- {
-    title: 'Manna Feast — January 2026',
-    month: 'January',
-    year: 2026,
-    cover: 'covers/manna-feast-2026-january-cover.jpg',
-    pdf: 'pdfs/manna-feast-january-2026.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — February 2026',
-    month: 'February',
-    year: 2026,
-    cover: 'covers/manna-feast-2026-february-cover.jpg',
-    pdf: 'pdfs/manna-feast-february-2026.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — March 2026',
-    month: 'March',
-    year: 2026,
-    cover: 'covers/manna-feast-2026-march-cover.jpg',
-    pdf: 'pdfs/manna-feast-march-2026.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — April 2026',
-    month: 'April',
-    year: 2026,
-    cover: 'covers/manna-feast-2026-april-cover.jpg',
-    pdf: 'pdfs/manna-feast-april-2026.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — May 2026',
-    month: 'May',
-    year: 2026,
-    cover: 'covers/manna-feast-2026-may-cover.jpg',
-    pdf: 'pdfs/manna-feast-may-2026.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — June 2026',
-    month: 'June',
-    year: 2026,
-    cover: 'covers/manna-feast-2026-june-cover.jpg',
-    pdf: 'pdfs/manna-feast-june-2026.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — July 2026',
-    month: 'July',
-    year: 2026,
-    cover: 'covers/manna-feast-2026-july-cover.jpg',
-    pdf: 'pdfs/manna-feast-july-2026.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — August 2026',
-    month: 'August',
-    year: 2026,
-    cover: 'covers/manna-feast-2026-august-cover.jpg',
-    pdf: 'pdfs/manna-feast-august-2026.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — September 2026',
-    month: 'September',
-    year: 2026,
-    cover: 'covers/manna-feast-2026-september-cover.jpg',
-    pdf: 'pdfs/manna-feast-september-2026.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — January 2025',
-    month: 'January',
-    year: 2025,
-    cover: 'covers/manna-feast-2025-january-cover.jpg',
-    pdf: 'pdfs/manna-feast-january-2025.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — February 2025',
-    month: 'February',
-    year: 2025,
-    cover: 'covers/manna-feast-2025-february-cover.jpg',
-    pdf: 'pdfs/manna-feast-february-2025.pdf',
-    description: 'Another sample issue included so you can test how the archive should work.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — March 2025',
-    month: 'March',
-    year: 2025,
-    cover: 'covers/manna-feast-2025-march-cover.jpg',
-    pdf: 'pdfs/manna-feast-march-2025.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — April 2025',
-    month: 'April',
-    year: 2025,
-    cover: 'covers/manna-feast-2025-april-cover.jpg',
-    pdf: 'pdfs/manna-feast-april-2025.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — May 2025',
-    month: 'May',
-    year: 2025,
-    cover: 'covers/manna-feast-2025-may-cover.jpg',
-    pdf: 'pdfs/manna-feast-may-2025.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — June 2025',
-    month: 'June',
-    year: 2025,
-    cover: 'covers/manna-feast-2025-june-cover.jpg',
-    pdf: 'pdfs/manna-feast-june-2025.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — July 2025',
-    month: 'July',
-    year: 2025,
-    cover: 'covers/manna-feast-2025-july-cover.jpg',
-    pdf: 'pdfs/manna-feast-july-2025.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — August 2025',
-    month: 'August',
-    year: 2025,
-    cover: 'covers/manna-feast-2025-august-cover.jpg',
-    pdf: 'pdfs/manna-feast-august-2025.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — September 2025',
-    month: 'September',
-    year: 2025,
-    cover: 'covers/manna-feast-2025-september-cover.jpg',
-    pdf: 'pdfs/manna-feast-september-2025.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — October 2025',
-    month: 'October',
-    year: 2025,
-    cover: 'covers/manna-feast-2025-october-cover.jpg',
-    pdf: 'pdfs/manna-feast-october-2025.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — November 2025',
-    month: 'November',
-    year: 2025,
-    cover: 'covers/manna-feast-2025-november-cover.jpg',
-    pdf: 'pdfs/manna-feast-november-2025.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — December 2025',
-    month: 'December',
-    year: 2025,
-    cover: 'covers/manna-feast-2025-december-cover.jpg',
-    pdf: 'pdfs/manna-feast-december-2025.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — January 2024',
-    month: 'January',
-    year: 2024,
-    cover: 'covers/manna-feast-2024-january-cover.jpg',
-    pdf: 'pdfs/manna-feast-january-2024.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — February 2024',
-    month: 'February',
-    year: 2024,
-    cover: 'covers/manna-feast-2024-february-cover.jpg',
-    pdf: 'pdfs/manna-feast-february-2024.pdf',
-    description: 'Another sample issue included so you can test how the archive should work.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — March 2024',
-    month: 'March',
-    year: 2024,
-    cover: 'covers/manna-feast-2024-march-cover.jpg',
-    pdf: 'pdfs/manna-feast-march-2024.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — April 2024',
-    month: 'April',
-    year: 2024,
-    cover: 'covers/manna-feast-2024-april-cover.jpg',
-    pdf: 'pdfs/manna-feast-april-2024.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — May 2024',
-    month: 'May',
-    year: 2024,
-    cover: 'covers/manna-feast-2024-may-cover.jpg',
-    pdf: 'pdfs/manna-feast-may-2024.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — June 2024',
-    month: 'June',
-    year: 2024,
-    cover: 'covers/manna-feast-2024-june-cover.jpg',
-    pdf: 'pdfs/manna-feast-june-2024.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — July 2024',
-    month: 'July',
-    year: 2024,
-    cover: 'covers/manna-feast-2024-july-cover.jpg',
-    pdf: 'pdfs/manna-feast-july-2024.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — August 2024',
-    month: 'August',
-    year: 2024,
-    cover: 'covers/manna-feast-2024-august-cover.jpg',
-    pdf: 'pdfs/manna-feast-august-2024.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — September 2024',
-    month: 'September',
-    year: 2024,
-    cover: 'covers/manna-feast-2024-september-cover.jpg',
-    pdf: 'pdfs/manna-feast-september-2024.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — October 2024',
-    month: 'October',
-    year: 2024,
-    cover: 'covers/manna-feast-2024-october-cover.jpg',
-    pdf: 'pdfs/manna-feast-october-2024.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — November 2024',
-    month: 'November',
-    year: 2024,
-    cover: 'covers/manna-feast-2024-november-cover.jpg',
-    pdf: 'pdfs/manna-feast-november-2024.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — December 2024',
-    month: 'December',
-    year: 2024,
-    cover: 'covers/manna-feast-2024-december-cover.jpg',
-    pdf: 'pdfs/manna-feast-december-2024.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — January 2023',
-    month: 'January',
-    year: 2023,
-    cover: 'covers/manna-feast-2023-january-cover.jpg',
-    pdf: 'pdfs/manna-feast-january-2023.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — February 2023',
-    month: 'February',
-    year: 2023,
-    cover: 'covers/manna-feast-2023-february-cover.jpg',
-    pdf: 'pdfs/manna-feast-february-2023.pdf',
-    description: 'Another sample issue included so you can test how the archive should work.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — March 2023',
-    month: 'March',
-    year: 2023,
-    cover: 'covers/manna-feast-2023-march-cover.jpg',
-    pdf: 'pdfs/manna-feast-march-2023.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — April 2023',
-    month: 'April',
-    year: 2023,
-    cover: 'covers/manna-feast-2023-april-cover.jpg',
-    pdf: 'pdfs/manna-feast-april-2023.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — May 2023',
-    month: 'May',
-    year: 2023,
-    cover: 'covers/manna-feast-2023-may-cover.jpg',
-    pdf: 'pdfs/manna-feast-may-2023.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — June 2023',
-    month: 'June',
-    year: 2023,
-    cover: 'covers/manna-feast-2023-june-cover.jpg',
-    pdf: 'pdfs/manna-feast-june-2023.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — July 2023',
-    month: 'July',
-    year: 2023,
-    cover: 'covers/manna-feast-2023-july-cover.jpg',
-    pdf: 'pdfs/manna-feast-july-2023.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — August 2023',
-    month: 'August',
-    year: 2023,
-    cover: 'covers/manna-feast-2023-august-cover.jpg',
-    pdf: 'pdfs/manna-feast-august-2023.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  { 
-    title: 'Manna Feast — September 2023',
-    month: 'September',
-    year: 2023,
-    cover: 'covers/manna-feast-2023-september-cover.jpg',
-    pdf: 'pdfs/manna-feast-september-2023.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — October 2023',
-    month: 'October',
-    year: 2023,
-    cover: 'covers/manna-feast-2023-october-cover.jpg',
-    pdf: 'pdfs/manna-feast-october-2023.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — November 2023',
-    month: 'November',
-    year: 2023,
-    cover: 'covers/manna-feast-2023-november-cover.jpg',
-    pdf: 'pdfs/manna-feast-november-2023.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — December 2023',
-    month: 'December',
-    year: 2023,
-    cover: 'covers/manna-feast-2023-december-cover.jpg',
-    pdf: 'pdfs/manna-feast-december-2023.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — January 2022',
-    month: 'January',
-    year: 2022,
-    cover: 'covers/manna-feast-2022-january-cover.jpg',
-    pdf: 'pdfs/manna-feast-january-2022.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — February 2022',
-    month: 'February',
-    year: 2022,
-    cover: 'covers/manna-feast-2022-february-cover.jpg',
-    pdf: 'pdfs/manna-feast-february-2022.pdf',
-    description: 'Another sample issue included so you can test how the archive should work.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — March 2022',
-    month: 'March',
-    year: 2022,
-    cover: 'covers/manna-feast-2022-march-cover.jpg',
-    pdf: 'pdfs/manna-feast-march-2022.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — April 2022',
-    month: 'April',
-    year: 2022,
-    cover: 'covers/manna-feast-2022-april-cover.jpg',
-    pdf: 'pdfs/manna-feast-april-2022.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — May 2022',
-    month: 'May',
-    year: 2022,
-    cover: 'covers/manna-feast-2022-may-cover.jpg',
-    pdf: 'pdfs/manna-feast-may-2022.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — June 2022',
-    month: 'June',
-    year: 2022,
-    cover: 'covers/manna-feast-2022-june-cover.jpg',
-    pdf: 'pdfs/manna-feast-june-2022.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — July 2022',
-    month: 'July',
-    year: 2022,
-    cover: 'covers/manna-feast-2022-july-cover.jpg',
-    pdf: 'pdfs/manna-feast-july-2022.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — August 2022',
-    month: 'August',
-    year: 2022,
-    cover: 'covers/manna-feast-2022-august-cover.jpg',
-    pdf: 'pdfs/manna-feast-august-2022.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — September 2022',
-    month: 'September',
-    year: 2022,
-    cover: 'covers/manna-feast-2022-september-cover.jpg',
-    pdf: 'pdfs/manna-feast-september-2022.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — October 2022',
-    month: 'October',
-    year: 2022,
-    cover: 'covers/manna-feast-2022-october-cover.jpg',
-    pdf: 'pdfs/manna-feast-october-2022.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — November 2022',
-    month: 'November',
-    year: 2022,
-    cover: 'covers/manna-feast-2022-november-cover.jpg',
-    pdf: 'pdfs/manna-feast-november-2022.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — December 2022',
-    month: 'December',
-    year: 2022,
-    cover: 'covers/manna-feast-2022-december-cover.jpg',
-    pdf: 'pdfs/manna-feast-december-2022.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — January 2021',
-    month: 'January',
-    year: 2021,
-    cover: 'covers/manna-feast-2021-january-cover.jpg',
-    pdf: 'pdfs/manna-feast-january-2021.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — February 2021',
-    month: 'February',
-    year: 2021,
-    cover: 'covers/manna-feast-2021-february-cover.jpg',
-    pdf: 'pdfs/manna-feast-february-2021.pdf',
-    description: 'Another sample issue included so you can test how the archive should work.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — March 2021',
-    month: 'March',
-    year: 2021,
-    cover: 'covers/manna-feast-2021-march-cover.jpg',
-    pdf: 'pdfs/manna-feast-march-2021.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — April 2021',
-    month: 'April',
-    year: 2021,
-    cover: 'covers/manna-feast-2021-april-cover.jpg',
-    pdf: 'pdfs/manna-feast-april-2021.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — May 2021',
-    month: 'May',
-    year: 2021,
-    cover: 'covers/manna-feast-2021-may-cover.jpg',
-    pdf: 'pdfs/manna-feast-may-2021.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — June 2021',
-    month: 'June',
-    year: 2021,
-    cover: 'covers/manna-feast-2021-june-cover.jpg',
-    pdf: 'pdfs/manna-feast-june-2021.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — July 2021',
-    month: 'July',
-    year: 2021,
-    cover: 'covers/manna-feast-2021-july-cover.jpg',
-    pdf: 'pdfs/manna-feast-july-2021.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — August 2021',
-    month: 'August',
-    year: 2021,
-    cover: 'covers/manna-feast-2021-august-cover.jpg',
-    pdf: 'pdfs/manna-feast-august-2021.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — September 2021',
-    month: 'September',
-    year: 2021,
-    cover: 'covers/manna-feast-2021-september-cover.jpg',
-    pdf: 'pdfs/manna-feast-september-2021.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — October 2021',
-    month: 'October',
-    year: 2021,
-    cover: 'covers/manna-feast-2021-october-cover.jpg',
-    pdf: 'pdfs/manna-feast-october-2021.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — November 2021',
-    month: 'November',
-    year: 2021,
-    cover: 'covers/manna-feast-2021-november-cover.jpg',
-    pdf: 'pdfs/manna-feast-november-2021.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — December 2021',
-    month: 'December',
-    year: 2021,
-    cover: 'covers/manna-feast-2021-december-cover.jpg',
-    pdf: 'pdfs/manna-feast-december-2021.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-   {
-    title: 'Manna Feast — January 2020',
-    month: 'January',
-    year: 2020,
-    cover: 'covers/manna-feast-2020-january-cover.jpg',
-    pdf: 'pdfs/manna-feast-january-2020.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — February 2020',
-    month: 'February',
-    year: 2020,
-    cover: 'covers/manna-feast-2020-february-cover.jpg',
-    pdf: 'pdfs/manna-feast-february-2020.pdf',
-    description: 'Another sample issue included so you can test how the archive should work.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — March 2020',
-    month: 'March',
-    year: 2020,
-    cover: 'covers/manna-feast-2020-march-cover.jpg',
-    pdf: 'pdfs/manna-feast-march-2020.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — April 2020',
-    month: 'April',
-    year: 2020,
-    cover: 'covers/manna-feast-2020-april-cover.jpg',
-    pdf: 'pdfs/manna-feast-april-2020.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — May 2020',
-    month: 'May',
-    year: 2020,
-    cover: 'covers/manna-feast-2020-may-cover.jpg',
-    pdf: 'pdfs/manna-feast-may-2020.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — June 2020',
-    month: 'June',
-    year: 2020,
-    cover: 'covers/manna-feast-2020-june-cover.jpg',
-    pdf: 'pdfs/manna-feast-june-2020.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — July 2020',
-    month: 'July',
-    year: 2020,
-    cover: 'covers/manna-feast-2020-july-cover.jpg',
-    pdf: 'pdfs/manna-feast-july-2020.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — August 2020',
-    month: 'August',
-    year: 2020,
-    cover: 'covers/manna-feast-2020-august-cover.jpg',
-    pdf: 'pdfs/manna-feast-august-2020.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — September 2020',
-    month: 'September',
-    year: 2020,
-    cover: 'covers/manna-feast-2020-september-cover.jpg',
-    pdf: 'pdfs/manna-feast-september-2020.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — October 2020',
-    month: 'October',
-    year: 2020,
-    cover: 'covers/manna-feast-2020-october-cover.jpg',
-    pdf: 'pdfs/manna-feast-october-2020.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — November 2020',
-    month: 'November',
-    year: 2020,
-    cover: 'covers/manna-feast-2020-november-cover.jpg',
-    pdf: 'pdfs/manna-feast-november-2020.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — December 2020',
-    month: 'December',
-    year: 2020,
-    cover: 'covers/manna-feast-2020-december-cover.jpg',
-    pdf: 'pdfs/manna-feast-december-2020.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-   {
-    title: 'Manna Feast — January 2019',
-    month: 'January',
-    year: 2019,
-    cover: 'covers/manna-feast-2019-january-cover.jpg',
-    pdf: 'pdfs/manna-feast-january-2019.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — February 2019',
-    month: 'February',
-    year: 2019,
-    cover: 'covers/manna-feast-2019-february-cover.jpg',
-    pdf: 'pdfs/manna-feast-february-2019.pdf',
-    description: 'Another sample issue included so you can test how the archive should work.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — March 2019',
-    month: 'March',
-    year: 2019,
-    cover: 'covers/manna-feast-2019-march-cover.jpg',
-    pdf: 'pdfs/manna-feast-march-2019.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — April 2019',
-    month: 'April',
-    year: 2019,
-    cover: 'covers/manna-feast-2019-april-cover.jpg',
-    pdf: 'pdfs/manna-feast-april-2019.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — May 2019',
-    month: 'May',
-    year: 2019,
-    cover: 'covers/manna-feast-2019-may-cover.jpg',
-    pdf: 'pdfs/manna-feast-may-2019.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — June 2019',
-    month: 'June',
-    year: 2019,
-    cover: 'covers/manna-feast-2019-june-cover.jpg',
-    pdf: 'pdfs/manna-feast-june-2019.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — July 2019',
-    month: 'July',
-    year: 2019,
-    cover: 'covers/manna-feast-2019-july-cover.jpg',
-    pdf: 'pdfs/manna-feast-july-2019.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — August 2019',
-    month: 'August',
-    year: 2019,
-    cover: 'covers/manna-feast-2019-august-cover.jpg',
-    pdf: 'pdfs/manna-feast-august-2019.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — September 2019',
-    month: 'September',
-    year: 2019,
-    cover: 'covers/manna-feast-2019-september-cover.jpg',
-    pdf: 'pdfs/manna-feast-september-2019.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — October 2019',
-    month: 'October',
-    year: 2019,
-    cover: 'covers/manna-feast-2019-october-cover.jpg',
-    pdf: 'pdfs/manna-feast-october-2019.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — November 2019',
-    month: 'November',
-    year: 2019,
-    cover: 'covers/manna-feast-2019-november-cover.jpg',
-    pdf: 'pdfs/manna-feast-november-2019.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — December 2019',
-    month: 'December',
-    year: 2019,
-    cover: 'covers/manna-feast-2019-december-cover.jpg',
-    pdf: 'pdfs/manna-feast-december-2019.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-   {
-    title: 'Manna Feast — January 2018',
-    month: 'January',
-    year: 2018,
-    cover: 'covers/manna-feast-2018-january-cover.jpg',
-    pdf: 'pdfs/manna-feast-january-2018.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — February 2018',
-    month: 'February',
-    year: 2018,
-    cover: 'covers/manna-feast-2018-february-cover.jpg',
-    pdf: 'pdfs/manna-feast-february-2018.pdf',
-    description: 'Another sample issue included so you can test how the archive should work.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — March 2018',
-    month: 'March',
-    year: 2018,
-    cover: 'covers/manna-feast-2018-march-cover.jpg',
-    pdf: 'pdfs/manna-feast-march-2018.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — April 2018',
-    month: 'April',
-    year: 2018,
-    cover: 'covers/manna-feast-2018-april-cover.jpg',
-    pdf: 'pdfs/manna-feast-april-2018.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — May 2018',
-    month: 'May',
-    year: 2018,
-    cover: 'covers/manna-feast-2018-may-cover.jpg',
-    pdf: 'pdfs/manna-feast-may-2018.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — June 2018',
-    month: 'June',
-    year: 2018,
-    cover: 'covers/manna-feast-2018-june-cover.jpg',
-    pdf: 'pdfs/manna-feast-june-2018.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — July 2018',
-    month: 'July',
-    year: 2018,
-    cover: 'covers/manna-feast-2018-july-cover.jpg',
-    pdf: 'pdfs/manna-feast-july-2018.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — August 2018',
-    month: 'August',
-    year: 2018,
-    cover: 'covers/manna-feast-2018-august-cover.jpg',
-    pdf: 'pdfs/manna-feast-august-2018.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — September 2018',
-    month: 'September',
-    year: 2018,
-    cover: 'covers/manna-feast-2018-september-cover.jpg',
-    pdf: 'pdfs/manna-feast-september-2018.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — October 2018',
-    month: 'October',
-    year: 2018,
-    cover: 'covers/manna-feast-2018-october-cover.jpg',
-    pdf: 'pdfs/manna-feast-october-2018.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — November 2018',
-    month: 'November',
-    year: 2018,
-    cover: 'covers/manna-feast-2018-november-cover.jpg',
-    pdf: 'pdfs/manna-feast-november-2018.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — December 2018',
-    month: 'December',
-    year: 2018,
-    cover: 'covers/manna-feast-2018-december-cover.jpg',
-    pdf: 'pdfs/manna-feast-december-2018.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-   {
-    title: 'Manna Feast — January 2017',
-    month: 'January',
-    year: 2017,
-    cover: 'covers/manna-feast-2017-january-cover.jpg',
-    pdf: 'pdfs/manna-feast-january-2017.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — February 2017',
-    month: 'February',
-    year: 2017,
-    cover: 'covers/manna-feast-2017-february-cover.jpg',
-    pdf: 'pdfs/manna-feast-february-2017.pdf',
-    description: 'Another sample issue included so you can test how the archive should work.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — March 2017',
-    month: 'March',
-    year: 2017,
-    cover: 'covers/manna-feast-2017-march-cover.jpg',
-    pdf: 'pdfs/manna-feast-march-2017.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — April 2017',
-    month: 'April',
-    year: 2017,
-    cover: 'covers/manna-feast-2017-april-cover.jpg',
-    pdf: 'pdfs/manna-feast-april-2017.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — May 2017',
-    month: 'May',
-    year: 2017,
-    cover: 'covers/manna-feast-2017-may-cover.jpg',
-    pdf: 'pdfs/manna-feast-may-2017.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — June 2017',
-    month: 'June',
-    year: 2017,
-    cover: 'covers/manna-feast-2017-june-cover.jpg',
-    pdf: 'pdfs/manna-feast-june-2017.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — July 2017',
-    month: 'July',
-    year: 2017,
-    cover: 'covers/manna-feast-2017-july-cover.jpg',
-    pdf: 'pdfs/manna-feast-july-2017.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — August 2017',
-    month: 'August',
-    year: 2017,
-    cover: 'covers/manna-feast-2017-august-cover.jpg',
-    pdf: 'pdfs/manna-feast-august-2017.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — September 2017',
-    month: 'September',
-    year: 2017,
-    cover: 'covers/manna-feast-2017-september-cover.jpg',
-    pdf: 'pdfs/manna-feast-september-2017.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — October 2017',
-    month: 'October',
-    year: 2017,
-    cover: 'covers/manna-feast-2017-october-cover.jpg',
-    pdf: 'pdfs/manna-feast-october-2017.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — November 2017',
-    month: 'November',
-    year: 2017,
-    cover: 'covers/manna-feast-2017-november-cover.jpg',
-    pdf: 'pdfs/manna-feast-november-2017.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — December 2017',
-    month: 'December',
-    year: 2017,
-    cover: 'covers/manna-feast-2017-december-cover.jpg',
-    pdf: 'pdfs/manna-feast-december-2017.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-   {
-    title: 'Manna Feast — January 2016',
-    month: 'January',
-    year: 2016,
-    cover: 'covers/manna-feast-2016-january-cover.jpg',
-    pdf: 'pdfs/manna-feast-january-2016.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — February 2016',
-    month: 'February',
-    year: 2016,
-    cover: 'covers/manna-feast-2016-february-cover.jpg',
-    pdf: 'pdfs/manna-feast-february-2016.pdf',
-    description: 'Another sample issue included so you can test how the archive should work.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — March 2016',
-    month: 'March',
-    year: 2016,
-    cover: 'covers/manna-feast-2016-march-cover.jpg',
-    pdf: 'pdfs/manna-feast-march-2016.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — April 2016',
-    month: 'April',
-    year: 2016,
-    cover: 'covers/manna-feast-2016-april-cover.jpg',
-    pdf: 'pdfs/manna-feast-april-2016.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — May 2016',
-    month: 'May',
-    year: 2016,
-    cover: 'covers/manna-feast-2016-may-cover.jpg',
-    pdf: 'pdfs/manna-feast-may-2016.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — June 2016',
-    month: 'June',
-    year: 2016,
-    cover: 'covers/manna-feast-2016-june-cover.jpg',
-    pdf: 'pdfs/manna-feast-june-2016.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — July 2016',
-    month: 'July',
-    year: 2016,
-    cover: 'covers/manna-feast-2016-july-cover.jpg',
-    pdf: 'pdfs/manna-feast-july-2016.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — August 2016',
-    month: 'August',
-    year: 2016,
-    cover: 'covers/manna-feast-2016-august-cover.jpg',
-    pdf: 'pdfs/manna-feast-august-2016.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — September 2016',
-    month: 'September',
-    year: 2016,
-    cover: 'covers/manna-feast-2016-september-cover.jpg',
-    pdf: 'pdfs/manna-feast-september-2016.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — October 2016',
-    month: 'October',
-    year: 2016,
-    cover: 'covers/manna-feast-2016-october-cover.jpg',
-    pdf: 'pdfs/manna-feast-october-2016.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — November 2016',
-    month: 'November',
-    year: 2016,
-    cover: 'covers/manna-feast-2016-november-cover.jpg',
-    pdf: 'pdfs/manna-feast-november-2016.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — December 2016',
-    month: 'December',
-    year: 2016,
-    cover: 'covers/manna-feast-2016-december-cover.jpg',
-    pdf: 'pdfs/manna-feast-december-2016.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
- 
-   {
-    title: 'Manna Feast — January 2015',
-    month: 'January',
-    year: 2015,
-    cover: 'covers/manna-feast-2015-january-cover.jpg',
-    pdf: 'pdfs/manna-feast-january-2015.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — February 2015',
-    month: 'February',
-    year: 2015,
-    cover: 'covers/manna-feast-2015-february-cover.jpg',
-    pdf: 'pdfs/manna-feast-february-2015.pdf',
-    description: 'Another sample issue included so you can test how the archive should work.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — March 2015',
-    month: 'March',
-    year: 2015,
-    cover: 'covers/manna-feast-2015-march-cover.jpg',
-    pdf: 'pdfs/manna-feast-march-2015.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — April 2015',
-    month: 'April',
-    year: 2015,
-    cover: 'covers/manna-feast-2015-april-cover.jpg',
-    pdf: 'pdfs/manna-feast-april-2015.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — May 2015',
-    month: 'May',
-    year: 2015,
-    cover: 'covers/manna-feast-2015-may-cover.jpg',
-    pdf: 'pdfs/manna-feast-may-2015.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — June 2015',
-    month: 'June',
-    year: 2015,
-    cover: 'covers/manna-feast-2015-june-cover.jpg',
-    pdf: 'pdfs/manna-feast-june-2015.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — July 2015',
-    month: 'July',
-    year: 2015,
-    cover: 'covers/manna-feast-2015-july-cover.jpg',
-    pdf: 'pdfs/manna-feast-july-2015.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — August 2015',
-    month: 'August',
-    year: 2015,
-    cover: 'covers/manna-feast-2015-august-cover.jpg',
-    pdf: 'pdfs/manna-feast-august-2015.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — September 2015',
-    month: 'September',
-    year: 2015,
-    cover: 'covers/manna-feast-2015-september-cover.jpg',
-    pdf: 'pdfs/manna-feast-september-2015.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — October 2015',
-    month: 'October',
-    year: 2015,
-    cover: 'covers/manna-feast-2015-october-cover.jpg',
-    pdf: 'pdfs/manna-feast-october-2015.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — November 2015',
-    month: 'November',
-    year: 2015,
-    cover: 'covers/manna-feast-2015-november-cover.jpg',
-    pdf: 'pdfs/manna-feast-november-2015.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — December 2015',
-    month: 'December',
-    year: 2015,
-    cover: 'covers/manna-feast-2015-december-cover.jpg',
-    pdf: 'pdfs/manna-feast-december-2015.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-   {
-    title: 'Manna Feast — January 2014',
-    month: 'January',
-    year: 2014,
-    cover: 'covers/manna-feast-2014-january-cover.jpg',
-    pdf: 'pdfs/manna-feast-january-2014.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — February 2014',
-    month: 'February',
-    year: 2014,
-    cover: 'covers/manna-feast-2014-february-cover.jpg',
-    pdf: 'pdfs/manna-feast-february-2014.pdf',
-    description: 'Another sample issue included so you can test how the archive should work.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — March 2014',
-    month: 'March',
-    year: 2014,
-    cover: 'covers/manna-feast-2014-march-cover.jpg',
-    pdf: 'pdfs/manna-feast-march-2014.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — April 2014',
-    month: 'April',
-    year: 2014,
-    cover: 'covers/manna-feast-2014-april-cover.jpg',
-    pdf: 'pdfs/manna-feast-april-2014.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — May 2014',
-    month: 'May',
-    year: 2014,
-    cover: 'covers/manna-feast-2014-may-cover.jpg',
-    pdf: 'pdfs/manna-feast-may-2014.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — June 2014',
-    month: 'June',
-    year: 2014,
-    cover: 'covers/manna-feast-2014-june-cover.jpg',
-    pdf: 'pdfs/manna-feast-june-2014.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — July 2014',
-    month: 'July',
-    year: 2014,
-    cover: 'covers/manna-feast-2014-july-cover.jpg',
-    pdf: 'pdfs/manna-feast-july-2014.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — August 2014',
-    month: 'August',
-    year: 2014,
-    cover: 'covers/manna-feast-2014-august-cover.jpg',
-    pdf: 'pdfs/manna-feast-august-2014.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — September 2014',
-    month: 'September',
-    year: 2014,
-    cover: 'covers/manna-feast-2014-september-cover.jpg',
-    pdf: 'pdfs/manna-feast-september-2014.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — October 2014',
-    month: 'October',
-    year: 2014,
-    cover: 'covers/manna-feast-2014-october-cover.jpg',
-    pdf: 'pdfs/manna-feast-october-2014.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — November 2014',
-    month: 'November',
-    year: 2014,
-    cover: 'covers/manna-feast-2014-november-cover.jpg',
-    pdf: 'pdfs/manna-feast-november-2014.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  {
-    title: 'Manna Feast — December 2014',
-    month: 'December',
-    year: 2014,
-    cover: 'covers/manna-feast-2014-december-cover.jpg',
-    pdf: 'pdfs/manna-feast-december-2014.pdf',
-    description: 'Sample live issue included in this starter library. Read online or download the PDF.',
-    available: true
-  },
-  
+/* =========================================
+   MONTHS
+   ========================================= */
+
+const months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
 ];
 
-const searchInput = document.getElementById('searchInput');
-const yearSelect = document.getElementById('yearSelect');
-const cardsGrid = document.getElementById('cardsGrid');
-const resultInfo = document.getElementById('resultInfo');
-const emptyState = document.getElementById('emptyState');
-const yearChipRow = document.getElementById('yearChipRow');
 
-const minimumYear = 2014;
-const allYears = [];
-for (let y = currentYear; y >= minimumYear; y--) {
-  allYears.push(y);
-}
+/* =========================================
+   MONTHLY THEMES
 
-function buildYearSelect() {
-  yearSelect.innerHTML = '<option value="all">All years</option>' +
-    allYears.map(year => `<option value="${year}">${year}</option>`).join('');
-}
+   ONLY put REAL monthly themes here.
 
-function buildYearChips() {
-  yearChipRow.innerHTML = '';
-  const allButton = document.createElement('button');
-  allButton.className = 'year-chip active';
-  allButton.textContent = 'All';
-  allButton.dataset.year = 'all';
-  yearChipRow.appendChild(allButton);
+   Example for later:
 
-  allYears.forEach(year => {
-    const btn = document.createElement('button');
-    btn.className = 'year-chip';
-    btn.textContent = year;
-    btn.dataset.year = String(year);
-    yearChipRow.appendChild(btn);
-  });
+   '2014-03': 'The Month of ...',
 
-  yearChipRow.addEventListener('click', (event) => {
-    const button = event.target.closest('.year-chip');
-    if (!button) return;
+   If a month is not listed here,
+   the theme line stays empty.
+   ========================================= */
 
-    document.querySelectorAll('.year-chip').forEach(chip => chip.classList.remove('active'));
-    button.classList.add('active');
-    yearSelect.value = button.dataset.year;
-    renderCards();
-  });
-}
+const issueThemes = {
 
-function cardTemplate(item) {
-  const readButton = item.available
-    ? `<a class="read-link" href="${item.pdf}" target="_blank" rel="noopener noreferrer">Read Online</a>`
-    : '';
+  '2026-01': 'The Month of Royal Invitation',
+  '2026-02': 'The Month of DIVERSE OPERATIONS',
+  '2026-03': 'The Month of GRATITUDE AND PRAISE',
+  '2026-04': 'The Month of TRIUMPHANT PROGRESS',
 
-  const downloadButton = item.available
-    ? `<a class="download-link" href="${item.pdf}" download>Download PDF</a>`
-    : `<span class="download-link">Cover / PDF to be added</span>`;
+  '2026-05':
+    'The Month of Taking the Vision to Places',
+  '2026-06': 'The Month of THE OUTPOUR OF FRAGRANT WORSHIP',
+  '2026-07': 'The Month of CREDIBILITY AND REST',
+  '2026-08': 'The Month of MEDIATION',
+  '2026-09': 'The Month of TERRITORIAL ENLARGEMENT',
 
-  return `
-    <article class="issue-card">
-      <div class="cover-frame">
-        <img src="${item.cover}" alt="${item.title}">
-      </div>
-      <div class="issue-body">
-        <div class="issue-meta">${item.month.toUpperCase()} • ${item.year}</div>
-        <h3 class="issue-title">${item.title}</h3>
-        <p class="issue-description">${item.description}</p>
-        <div class="issue-actions">
-          ${readButton}
-          ${downloadButton}
-        </div>
-      </div>
-    </article>
-  `;
-}
+  '2025-01': 'The Month of ',
+  '2025-02': 'The Month of ',
+  '2025-03': 'The Month of ',
+  '2025-04': 'The Month of ',
+  '2025-05': 'The Month of ',
+  '2025-06': 'The Month to Open Up the Highway',
+  '2025-07': 'The Month of Go in and Possess',
+  '2025-08': 'The Month of Power Shift',
+  '2025-09': 'The Month of Raising a Standard of Intimacy',
+  '2025-10': 'The Month of Unfolding Realms of Favour',
+  '2025-11': 'The Month of Laudable Influence',
+  '2025-12': 'The Month of Reflection and Adoration',
 
-function getFilteredItems() {
-  const selectedYear = yearSelect.value;
-  const search = searchInput.value.trim().toLowerCase();
+  '2024-01': 'The Month of ',
+  '2024-02': 'The Month of Divine Presence and Honour',
+  '2024-03': 'The Month of Ascend and Behold',
+  '2024-04': 'The Month of ',
+  '2024-05': 'The Month of ',
+  '2024-06': 'The Month of Unraveled Influence',
+  '2024-07': 'The Month of Earn Honour',
+  '2024-08': 'The Month of ',
+  '2024-09': 'The Month of Laughter',
+  '2024-10': 'The Month of The Rising of Champions',
+  '2024-11': 'The Month of Engaging your Realm of Eploits',
+  '2024-12': 'The Month of Soar on Wings of Favour and Testimonies',
 
-  return publications.filter(item => {
-    const yearMatch = selectedYear === 'all' || String(item.year) === selectedYear;
-    const text = `${item.title} ${item.month} ${item.year}`.toLowerCase();
-    const searchMatch = !search || text.includes(search);
-    return yearMatch && searchMatch;
-  }).sort((a, b) => b.year - a.year);
-}
+  '2023-01': 'The Month of Endowment and Taking Over',
+  '2023-02': 'The Month of Greater Dimension Turnaround',
+  '2023-03': 'The Month of ',
+  '2023-04': 'The Month of ',
+  '2023-05': 'The Month of ',
+  '2023-06': 'The Month of Restoring Parched Grounds',
+  '2023-07': 'The Month of ',
+  '2023-08': 'The Month of Glorious Growth',
+  '2023-09': 'The Month of Amazing Wonders',
+  '2023-10': 'The Month of ',
+  '2023-11': 'The Month of ',
+  '2023-12': 'The Month of Vindication',
 
-function renderCards() {
-  const items = getFilteredItems();
-  cardsGrid.innerHTML = items.map(cardTemplate).join('');
+  '2022-01': 'The Month of Get It Settled',
+  '2022-02': 'The Month of ',
+  '2022-03': 'The Month of ',
+  '2022-04': 'The Month of Outstretched Victory',
+  '2022-05': 'The Month of Worthwhile Celebration',
+  '2022-06': 'The Month of ',
+  '2022-07': 'The Month of Dominant Influnce',
+  '2022-08': 'The Month of Breaking Barriers And Limitation',
+  '2022-09': 'The Month of ',
+  '2022-10': 'The Month of ',
+  '2022-11': 'The Month of Unfolding the Vision with Flames of Fire',
+  '2022-12': 'The Month of ',
 
-  if (items.length === 0) {
-    emptyState.classList.remove('hidden');
-    resultInfo.textContent = '0 issues found';
-  } else {
-    emptyState.classList.add('hidden');
-    resultInfo.textContent = `${items.length} issue${items.length === 1 ? '' : 's'} found`;
+  '2021-01': 'The Month of Get It Done',
+  '2021-02': 'The Month of Territorial Invasion',
+  '2021-03': 'The Month of The Rain of Revival',
+  '2021-04': 'The Month of Shine Forth',
+  '2021-05': 'The Month of ',
+  '2021-06': 'The Month of Recovery',
+  '2021-07': 'The Month of Rest ',
+  '2021-08': 'The Month of ',
+  '2021-09': 'The Month of ',
+  '2021-10': 'The Month of Majestic Greatness',
+  '2021-11': 'The Month of Divine Overflow',
+  '2021-12': 'The Month of ',
+
+  '2020-01': 'The Month of ',
+  '2020-02': 'The Month of ',
+  '2020-03': 'The Month of ',
+  '2020-04': 'The Month of Dynamic Expansion and Increase',
+  '2020-05': 'The Month of ',
+  '2020-06': 'The Month of Enlarge your Borders with Priase and Worship',
+  '2020-07': 'The Month of Plenty',
+  '2020-08': 'The Month of Greater Works',
+  '2020-09': 'The Month of ',
+  '2020-10': 'The Month of ',
+  '2020-11': 'The Month of ',
+  '2020-12': 'The Month of ',
+
+  '2019-01': 'The Month of ',
+  '2019-02': 'The Month of Uncommon Favour',
+  '2019-03': 'The Month to New Horizon',
+  '2019-04': 'The Month of Covenant Remembrance',
+  '2019-05': 'The Month of ',
+  '2019-06': 'The Month of Raising Subtances of Valour',
+  '2019-07': 'The Month to Stop your Stoppers',
+  '2019-08': 'The Month of Covenant Impact',
+  '2019-09': 'The Month of Persist in your Pursuit',
+  '2019-10': 'The Month of Supplication and Intercession(A Call to Wait Upon the Lord)',
+  '2019-11': 'The Month of ',
+  '2019-12': 'The Month of ',
+
+  '2018-01': 'The Month to Dig Deep',
+  '2018-02': 'The Month of ',
+  '2018-03': 'The Month to ',
+  '2018-04': 'The Month of ',
+  '2018-05': 'The Month of Supernatural Evidence',
+  '2018-06': 'The Month of ',
+  '2018-07': 'The Month to ',
+  '2018-08': 'The Month of ',
+  '2018-09': 'The Month of Unstoppable Emergence',
+  '2018-10': 'The Month of ',
+  '2018-11': 'The Month of Greater Lifting',
+  '2018-12': 'The Month of ',
+
+  
+  '2017-01': 'The Month of ',
+  '2017-02': 'The Month of ',
+  '2017-03': 'The Month to Sow',
+  '2017-04': 'The Month of Covenant Remembrance',
+  '2017-05': 'The Month of Greater Exploits',
+  '2017-06': 'The Month of ',
+  '2017-07': 'The Month to Stop your Stoppers',
+  '2017-08': 'The Month of Covenant Impact',
+  '2017-09': 'The Month to Shout for Joy',
+  '2017-10': 'The Month of Persistence and Enlargement',
+  '2017-11': 'The Month of ',
+  '2017-12': 'The Month of ',
+  
+
+  '2016-02': 'The Month of ',
+  '2016-03': 'The Month of ',
+  '2016-04': 'The Month of ',
+  '2016-05': 'The Month of ',
+  '2016-06': 'The Month of ',
+  '2016-07': 'The Month of ',
+  '2016-08': 'The Month of ',
+  '2016-09': 'The Month of Renewal and Lifting',
+  '2016-10': 'The Month of ',
+  '2016-11': 'The Month of ',
+  '2016-12': 'The Month of ',
+  
+
+  '2015-01': 'The Month of Sighting your Horizon',
+  '2015-02': 'The Month of ',
+  '2015-03': 'The Month of ',
+  '2015-04': 'The Month of Fruitfulness',
+  '2015-05': 'The Month of ',
+  '2015-06': 'The Month of ',
+  '2015-07': 'The Month of ',
+  '2015-08': 'The Month of Divine Compensation',
+  '2015-09': 'The Month of ',
+  '2015-10': 'The Month of ',
+  '2015-11': 'The Month of ',
+  '2015-12': 'The Month of ',
+  
+
+  
+  '2014-02': 'The Month of Divine Shower',
+  '2014-03': 'The Month of ',
+  '2014-04': 'The Month of ',
+  '2014-05': 'The Month of ',
+  '2014-06': 'The Month of ',
+  '2014-07': 'The Month of Advancing in Value',
+  '2014-08': 'The Month of ',
+  '2014-09': 'The Month of ',
+  '2014-10': 'The Month of ',
+  '2014-11': 'The Month of ',
+  '2014-12': 'The Month of ',
+  
+
+};
+
+
+/* =========================================
+   COVERS CURRENTLY ADDED
+
+   When you add another cover later,
+   add its year-month code here.
+
+   Example:
+   '2021-06'
+   ========================================= */
+
+const coverIssueKeys = [
+
+  '2026-01',
+  '2026-02',
+  '2026-03',
+  '2026-04',
+  '2026-05',
+  '2026-06',
+  '2026-07',
+  '2026-08',
+  '2026-09',
+
+  '2025-01',
+  '2025-02',
+  '2025-03',
+  '2025-04',
+  '2025-05',
+  '2025-06',
+  '2025-07',
+  '2025-08',
+  '2025-09',
+  '2025-10',
+  '2025-11',
+  '2025-12',
+
+  '2024-01',
+  '2024-02',
+  '2024-03',
+  '2024-04',
+  '2024-05',
+  '2024-06',
+  '2024-07',
+  '2024-08',
+  '2024-09',
+  '2024-11',
+  '2024-12',
+
+  '2023-01',
+  '2023-02',
+  '2023-03',
+  '2023-04',
+  '2023-05',
+  '2023-06',
+  '2023-07',
+  '2023-08',
+  '2023-09',
+  '2023-11',
+  '2023-12',
+
+  '2022-01',
+  '2022-02',
+  '2022-03',
+  '2022-04',
+  '2022-05',
+  '2022-06',
+  '2022-07',
+  '2022-08',
+  '2022-09',
+  '2022-11',
+  '2022-12',
+
+  '2021-01',
+  '2021-02',
+  '2021-03',
+  '2021-04',
+  '2021-05',
+  '2021-06',
+  '2021-07',
+  '2021-08',
+  '2021-09',
+  '2021-11',
+  '2021-12',
+
+  '2020-01',
+  '2020-02',
+  '2020-03',
+  '2020-04',
+  '2020-05',
+  '2020-06',
+  '2020-07',
+  '2020-08',
+  '2020-09',
+  '2020-11',
+  '2020-12',
+
+  '2019-01',
+  '2019-02',
+  '2019-03',
+  '2019-04',
+  '2019-05',
+  '2019-06',
+  '2019-07',
+  '2019-08',
+  '2019-09',
+  '2019-11',
+  '2019-12',
+
+  '2018-01',
+  '2018-02',
+  '2018-03',
+  '2018-04',
+  '2018-05',
+  '2018-06',
+  '2018-07',
+  '2018-08',
+  '2018-09',
+  '2018-11',
+  '2018-12',
+
+  '2017-01',
+  '2017-02',
+  '2017-03',
+  '2017-04',
+  '2017-05',
+  '2017-06',
+  '2017-07',
+  '2017-08',
+  '2017-09',
+  '2017-11',
+  '2017-12',
+
+  '2016-01',
+  '2016-02',
+  '2016-03',
+  '2016-04',
+  '2016-05',
+  '2016-06',
+  '2016-07',
+  '2016-08',
+  '2016-09',
+  '2016-11',
+  '2016-12',
+
+  '2015-01',
+  '2015-02',
+  '2015-03',
+  '2015-04',
+  '2015-05',
+  '2015-06',
+  '2015-07',
+  '2015-08',
+  '2015-09',
+  '2015-11',
+  '2015-12',
+
+  
+  '2014-02',
+  '2014-03',
+  '2014-04',
+  '2014-05',
+  '2014-06',
+  '2014-07',
+  '2014-08',
+  '2014-09',
+  '2014-11',
+  '2014-12',
+
+];
+
+
+/* =========================================
+   PDFs CURRENTLY ADDED
+
+   When you add another PDF later,
+   add its year-month code here too.
+
+   A publication may have a cover before
+   its PDF is available.
+   ========================================= */
+
+const pdfIssueKeys = [
+
+  '2026-01',
+  '2026-03',
+  '2026-04',
+  '2026-05',
+  '2026-06',
+  '2026-07',
+  '2026-08',
+  '2026-09',
+
+  '2025-04',
+  '2025-05',
+  '2025-06',
+  '2025-09',
+  '2025-11'
+
+];
+
+
+const coverIssueSet = new Set(coverIssueKeys);
+const pdfIssueSet = new Set(pdfIssueKeys);
+
+
+/* =========================================
+   CREATE PUBLICATION LIBRARY
+
+   2014 through September 2026
+   ========================================= */
+
+const publications = [];
+
+
+for (let year = 2026; year >= 2014; year--) {
+
+  const monthLimit =
+    year === 2026
+      ? 9
+      : 12;
+
+
+  for (
+    let monthNumber = monthLimit;
+    monthNumber >= 1;
+    monthNumber--
+  ) {
+
+    const month =
+      months[monthNumber - 1];
+
+    const monthSlug =
+      month.toLowerCase();
+
+    const monthCode =
+      String(monthNumber).padStart(2, '0');
+
+    const key =
+      `${year}-${monthCode}`;
+
+
+    publications.push({
+
+      key,
+
+      title:
+        `Manna Feast — ${month} ${year}`,
+
+      month,
+
+      monthNumber,
+
+      year,
+
+      cover:
+        `covers/manna-feast-${year}-${monthSlug}-cover.jpg`,
+
+      pdf:
+        `pdfs/manna-feast-${monthSlug}-${year}.pdf`,
+
+      description:
+        issueThemes[key] || '',
+
+      coverAvailable:
+        coverIssueSet.has(key),
+
+      pdfAvailable:
+        pdfIssueSet.has(key)
+
+    });
+
   }
+
 }
 
-buildYearSelect();
-buildYearChips();
-renderCards();
 
-searchInput.addEventListener('input', renderCards);
-yearSelect.addEventListener('change', () => {
-  const selectedValue = yearSelect.value;
-  document.querySelectorAll('.year-chip').forEach(chip => {
-    chip.classList.toggle('active', chip.dataset.year === selectedValue);
+/* =========================================
+   SCRIPTURES
+   ========================================= */
+
+const homeScriptures = [
+
+  {
+    text:
+      'Man shall not live by bread alone, but by every word that proceedeth out of the mouth of God.',
+    reference:
+      'Matthew 4:4 (KJV)'
+  },
+
+  {
+    text:
+      'Thy word is a lamp unto my feet, and a light unto my path.',
+    reference:
+      'Psalm 119:105 (KJV)'
+  },
+
+  {
+    text:
+      'Thy word have I hid in mine heart, that I might not sin against thee.',
+    reference:
+      'Psalm 119:11 (KJV)'
+  },
+
+  {
+    text:
+      'This book of the law shall not depart out of thy mouth; but thou shalt meditate therein day and night, that thou mayest observe to do according to all that is written therein: for then thou shalt make thy way prosperous, and then thou shalt have good success.',
+    reference:
+      'Joshua 1:8 (KJV)'
+  },
+
+  {
+    text:
+      'For the word of God is quick, and powerful, and sharper than any twoedged sword, piercing even to the dividing asunder of soul and spirit, and of the joints and marrow, and is a discerner of the thoughts and intents of the heart.',
+    reference:
+      'Hebrews 4:12 (KJV)'
+  },
+
+  {
+    text:
+      'But be ye doers of the word, and not hearers only, deceiving your own selves.',
+    reference:
+      'James 1:22 (KJV)'
+  }
+
+];
+
+
+/* =========================================
+   HELPERS
+   ========================================= */
+
+function findIssue(key) {
+
+  return publications.find(
+    issue => issue.key === key
+  );
+
+}
+
+
+function availableIssues() {
+
+  return publications.filter(
+    issue =>
+      issue.coverAvailable ||
+      issue.pdfAvailable
+  );
+
+}
+
+
+function coverIssues() {
+
+  return publications.filter(
+    issue =>
+      issue.coverAvailable
+  );
+
+}
+
+
+function issueDate(issue) {
+
+  return `${issue.month} ${issue.year}`;
+
+}
+
+
+function saveJSON(key, value) {
+
+  localStorage.setItem(
+    key,
+    JSON.stringify(value)
+  );
+
+}
+
+
+function loadJSON(key, fallback) {
+
+  try {
+
+    const value =
+      localStorage.getItem(key);
+
+    return value
+      ? JSON.parse(value)
+      : fallback;
+
+  } catch {
+
+    return fallback;
+
+  }
+
+}
+
+
+/* =========================================
+   SIDEBAR + PAGE NAVIGATION
+   ========================================= */
+
+const sidebar =
+  document.getElementById('sidebar');
+
+const sidebarOverlay =
+  document.getElementById('sidebarOverlay');
+
+const menuButton =
+  document.getElementById('menuButton');
+
+const collapseButton =
+  document.getElementById(
+    'sidebarCollapseButton'
+  );
+
+
+function openMobileSidebar() {
+
+  sidebar.classList.add('mobile-open');
+
+  sidebarOverlay.classList.add('visible');
+
+}
+
+
+function closeMobileSidebar() {
+
+  sidebar.classList.remove('mobile-open');
+
+  sidebarOverlay.classList.remove('visible');
+
+}
+
+
+if (menuButton) {
+
+  menuButton.addEventListener(
+    'click',
+    openMobileSidebar
+  );
+
+}
+
+
+if (sidebarOverlay) {
+
+  sidebarOverlay.addEventListener(
+    'click',
+    closeMobileSidebar
+  );
+
+}
+
+
+if (collapseButton) {
+
+  collapseButton.addEventListener(
+    'click',
+    () => {
+
+      document.body.classList.toggle(
+        'sidebar-collapsed'
+      );
+
+      localStorage.setItem(
+        'mannaSidebarCollapsed',
+        document.body.classList.contains(
+          'sidebar-collapsed'
+        )
+      );
+
+    }
+  );
+
+}
+
+
+if (
+  localStorage.getItem(
+    'mannaSidebarCollapsed'
+  ) === 'true'
+) {
+
+  document.body.classList.add(
+    'sidebar-collapsed'
+  );
+
+}
+
+
+function showPage(pageName) {
+
+  const validPages = [
+    'home',
+    'library',
+    'archive',
+    'search',
+    'favorites',
+    'reading',
+    'settings',
+    'about'
+  ];
+
+
+  if (!validPages.includes(pageName)) {
+
+    pageName = 'home';
+
+  }
+
+
+  document
+    .querySelectorAll('.app-page')
+    .forEach(page => {
+
+      page.classList.toggle(
+        'active-page',
+        page.dataset.page === pageName
+      );
+
+    });
+
+
+  document
+    .querySelectorAll('[data-nav]')
+    .forEach(link => {
+
+      link.classList.toggle(
+        'active',
+        link.dataset.nav === pageName
+      );
+
+    });
+
+
+  closeMobileSidebar();
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'instant'
   });
-  renderCards();
-});
-const themeButtons = document.querySelectorAll('[data-theme]');
 
-themeButtons.forEach(button => {
-  button.addEventListener('click', () => {
 
-    document.body.classList.remove(
-      'theme-forest',
-      'theme-cream',
-      'theme-blue'
-    );
+  if (pageName === 'favorites') {
+    renderFavorites();
+  }
 
-    if (button.dataset.theme === 'forest') {
-      document.body.classList.add('theme-forest');
-    }
 
-    if (button.dataset.theme === 'cream') {
-      document.body.classList.add('theme-cream');
-    }
+  if (pageName === 'reading') {
+    loadLastReading();
+  }
 
-    if (button.dataset.theme === 'blue') {
-      document.body.classList.add('theme-blue');
-    }
-  });
-});
-// FEATURED ISSUE ROTATION
+}
 
-const featuredCover = document.getElementById('featuredCover');
-const featuredTitle = document.getElementById('featuredTitle');
-const featuredDescription = document.getElementById('featuredDescription');
 
-// Only use publications that are actually available
-const featuredPublications = publications.filter(
-  publication => publication.available === true
+function readHash() {
+
+  const page =
+    window.location.hash
+      .replace('#', '')
+      .trim();
+
+  showPage(
+    page || 'home'
+  );
+
+}
+
+
+window.addEventListener(
+  'hashchange',
+  readHash
 );
 
-let featuredIndex = 0;
 
-function showFeaturedIssue() {
+/* =========================================
+   SCRIPTURE AUTO ROTATION
+   ========================================= */
 
-  if (featuredPublications.length === 0) {
+const scriptureWidget =
+  document.getElementById('scriptureWidget');
+
+const scriptureText =
+  document.getElementById('scriptureText');
+
+const scriptureReference =
+  document.getElementById(
+    'scriptureReference'
+  );
+
+
+let scriptureIndex = 0;
+
+
+function showScripture(index) {
+
+  if (
+    !scriptureText ||
+    !scriptureReference
+  ) {
     return;
   }
 
-  const issue = featuredPublications[featuredIndex];
 
-  featuredCover.src = issue.cover;
-  featuredCover.alt = issue.title;
+  const verse =
+    homeScriptures[index];
 
-  featuredTitle.textContent = issue.title;
 
-  featuredDescription.textContent =
-    issue.description || 'Monthly Manna Feast publication.';
+  if (scriptureWidget) {
 
-  featuredIndex++;
+    scriptureWidget.classList.add(
+      'is-changing'
+    );
 
-  if (featuredIndex >= featuredPublications.length) {
-    featuredIndex = 0;
   }
+
+
+  setTimeout(
+    () => {
+
+      scriptureText.textContent =
+        `“${verse.text}”`;
+
+      scriptureReference.textContent =
+        `— ${verse.reference}`;
+
+
+      if (scriptureWidget) {
+
+        scriptureWidget.classList.remove(
+          'is-changing'
+        );
+
+      }
+
+    },
+    250
+  );
+
 }
 
-// Show the first issue immediately
-showFeaturedIssue();
 
-// Change issue every 30 seconds
-setInterval(showFeaturedIssue, 30000);
+showScripture(scriptureIndex);
 
-// HOME SCRIPTURE WIDGET — APPROVED HOMEPAGE
-const homeScriptures = [
-  {
-    text: '“Man shall not live by bread alone, but by every word that proceedeth out of the mouth of God.”',
-    reference: 'Matthew 4:4 (KJV)'
+
+setInterval(
+  () => {
+
+    scriptureIndex =
+      (
+        scriptureIndex + 1
+      ) % homeScriptures.length;
+
+    showScripture(
+      scriptureIndex
+    );
+
   },
-  {
-    text: '“Thy word is a lamp unto my feet, and a light unto my path.”',
-    reference: 'Psalm 119:105 (KJV)'
-  },
-  {
-    text: '“Thy word have I hid in mine heart, that I might not sin against thee.”',
-    reference: 'Psalm 119:11 (KJV)'
-  },
-  {
-    text: '“This book of the law shall not depart out of thy mouth; but thou shalt meditate therein day and night, that thou mayest observe to do according to all that is written therein: for then thou shalt make thy way prosperous, and then thou shalt have good success.”',
-    reference: 'Joshua 1:8 (KJV)'
-  },
-  {
-    text: '“For the word of God is quick, and powerful, and sharper than any twoedged sword, piercing even to the dividing asunder of soul and spirit, and of the joints and marrow, and is a discerner of the thoughts and intents of the heart.”',
-    reference: 'Hebrews 4:12 (KJV)'
-  },
-  {
-    text: '“But be ye doers of the word, and not hearers only, deceiving your own selves.”',
-    reference: 'James 1:22 (KJV)'
-  }
-];
+  30000
+);
 
-const scriptureWidget = document.getElementById('scriptureWidget');
 
-if (scriptureWidget) {
-  const scriptureText = document.getElementById('scriptureText');
-  const scriptureReference = document.getElementById('scriptureReference');
-  const scriptureDots = document.getElementById('scriptureDots');
-  const scriptureStage = scriptureWidget.querySelector('.scripture-stage');
+/* =========================================
+   FEATURED MANNA FEAST ROTATION
+   ========================================= */
 
-  let scriptureIndex = 0;
-  let scriptureTimer = null;
-  let scriptureResumeTimer = null;
+const featuredCover =
+  document.getElementById(
+    'featuredCover'
+  );
 
-  function buildScriptureDots() {
-    scriptureDots.innerHTML = '';
+const featuredCoverPlaceholder =
+  document.getElementById(
+    'featuredCoverPlaceholder'
+  );
 
-    homeScriptures.forEach((_, index) => {
-      const dot = document.createElement('button');
-      dot.type = 'button';
-      dot.className = 'scripture-dot';
-      dot.setAttribute('aria-label', `Show scripture ${index + 1}`);
+const featuredTheme =
+  document.getElementById(
+    'featuredTheme'
+  );
 
-      dot.addEventListener('click', () => {
-        pauseScriptureRotation();
-        showScripture(index);
-      });
+const featuredDate =
+  document.getElementById(
+    'featuredDate'
+  );
 
-      scriptureDots.appendChild(dot);
-    });
-  }
+const featuredReadButton =
+  document.getElementById(
+    'featuredReadButton'
+  );
 
-  function showScripture(index) {
-    scriptureStage.classList.add('is-fading');
+const featuredDownloadButton =
+  document.getElementById(
+    'featuredDownloadButton'
+  );
 
-    setTimeout(() => {
-      scriptureIndex = (index + homeScriptures.length) % homeScriptures.length;
-      scriptureText.textContent = homeScriptures[scriptureIndex].text;
-      scriptureReference.textContent = `— ${homeScriptures[scriptureIndex].reference}`;
 
-      document.querySelectorAll('.scripture-dot').forEach((dot, dotIndex) => {
-        dot.classList.toggle('active', dotIndex === scriptureIndex);
-      });
+let featuredOrder = [];
+let featuredPosition = 0;
+let lastFeaturedKey = null;
 
-      scriptureStage.classList.remove('is-fading');
-    }, 180);
-  }
 
-  function startScriptureRotation() {
-    clearInterval(scriptureTimer);
-    scriptureTimer = setInterval(() => {
-      showScripture(scriptureIndex + 1);
-    }, 30000);
-  }
+function shuffleArray(array) {
 
-  function pauseScriptureRotation() {
-    clearInterval(scriptureTimer);
-    clearTimeout(scriptureResumeTimer);
-    scriptureResumeTimer = setTimeout(startScriptureRotation, 45000);
+  const copy = [...array];
+
+
+  for (
+    let i = copy.length - 1;
+    i > 0;
+    i--
+  ) {
+
+    const j =
+      Math.floor(
+        Math.random() * (i + 1)
+      );
+
+
+    [
+      copy[i],
+      copy[j]
+    ] = [
+      copy[j],
+      copy[i]
+    ];
+
   }
 
-  document.getElementById('scripturePrev').addEventListener('click', () => {
-    pauseScriptureRotation();
-    showScripture(scriptureIndex - 1);
-  });
 
-  document.getElementById('scriptureNext').addEventListener('click', () => {
-    pauseScriptureRotation();
-    showScripture(scriptureIndex + 1);
-  });
+  return copy;
 
-  scriptureWidget.addEventListener('mouseenter', () => clearInterval(scriptureTimer));
-  scriptureWidget.addEventListener('mouseleave', startScriptureRotation);
-  scriptureWidget.addEventListener('focusin', () => clearInterval(scriptureTimer));
-  scriptureWidget.addEventListener('focusout', startScriptureRotation);
-
-  buildScriptureDots();
-  showScripture(0);
-  startScriptureRotation();
 }
+
+
+function makeFeaturedOrder() {
+
+  featuredOrder =
+    shuffleArray(
+      coverIssues()
+    );
+
+
+  if (
+    featuredOrder.length > 1 &&
+    featuredOrder[0].key ===
+      lastFeaturedKey
+  ) {
+
+    [
+      featuredOrder[0],
+      featuredOrder[1]
+    ] = [
+      featuredOrder[1],
+      featuredOrder[0]
+    ];
+
+  }
+
+
+  featuredPosition = 0;
+
+}
+
+
+function showFeaturedIssue(issue) {
+
+  if (!issue) {
+    return;
+  }
+
+
+  lastFeaturedKey =
+    issue.key;
+
+
+  featuredDate.textContent =
+    issueDate(issue);
+
+
+  featuredTheme.textContent =
+    issue.description || '';
+
+
+  featuredCover.src =
+    issue.cover;
+
+
+  featuredCover.alt =
+    `${issueDate(issue)} Manna Feast cover`;
+
+
+  featuredCover.style.display =
+    'block';
+
+
+  featuredCoverPlaceholder.style.display =
+    'none';
+
+
+  featuredCover.onerror =
+    () => {
+
+      featuredCover.style.display =
+        'none';
+
+      featuredCoverPlaceholder.style.display =
+        'grid';
+
+    };
+
+
+  featuredReadButton.disabled =
+    !issue.pdfAvailable;
+
+
+  featuredDownloadButton.disabled =
+    !issue.pdfAvailable;
+
+
+  featuredReadButton.onclick =
+    () => {
+
+      if (issue.pdfAvailable) {
+
+        openReader(issue);
+
+      }
+
+    };
+
+
+  featuredDownloadButton.onclick =
+    () => {
+
+      if (issue.pdfAvailable) {
+
+        downloadIssue(issue);
+
+      }
+
+    };
+
+}
+
+
+function nextFeaturedIssue() {
+
+  if (!featuredOrder.length) {
+
+    makeFeaturedOrder();
+
+  }
+
+
+  const issue =
+    featuredOrder[
+      featuredPosition
+    ];
+
+
+  showFeaturedIssue(issue);
+
+
+  featuredPosition++;
+
+
+  if (
+    featuredPosition >=
+    featuredOrder.length
+  ) {
+
+    makeFeaturedOrder();
+
+  }
+
+}
+
+
+if (coverIssues().length) {
+
+  makeFeaturedOrder();
+
+  nextFeaturedIssue();
+
+
+  setInterval(
+    nextFeaturedIssue,
+    30000
+  );
+
+}
+
+
+/* =========================================
+   FAVORITES
+   ========================================= */
+
+function getFavorites() {
+
+  return loadJSON(
+    'mannaFavorites',
+    []
+  );
+
+}
+
+
+function isFavorite(key) {
+
+  return getFavorites().includes(key);
+
+}
+
+
+function toggleFavorite(key) {
+
+  const favorites =
+    getFavorites();
+
+
+  const index =
+    favorites.indexOf(key);
+
+
+  if (index === -1) {
+
+    favorites.push(key);
+
+  } else {
+
+    favorites.splice(index, 1);
+
+  }
+
+
+  saveJSON(
+    'mannaFavorites',
+    favorites
+  );
+
+
+  renderLibrary();
+
+  renderFavorites();
+
+  updateReaderFavoriteButton();
+
+}
+
+
+/* =========================================
+   ISSUE CARD
+   ========================================= */
+
+function createIssueCard(issue) {
+
+  const card =
+    document.createElement('article');
+
+  card.className =
+    'issue-card';
+
+
+  const coverArea =
+    document.createElement('div');
+
+  coverArea.className =
+    'issue-cover-wrap';
+
+
+  if (issue.coverAvailable) {
+
+    const image =
+      document.createElement('img');
+
+    image.src =
+      issue.cover;
+
+    image.alt =
+      `${issueDate(issue)} Manna Feast cover`;
+
+
+    image.onerror =
+      () => {
+
+        image.remove();
+
+        showCardCoverPlaceholder(
+          coverArea
+        );
+
+      };
+
+
+    coverArea.appendChild(
+      image
+    );
+
+  } else {
+
+    showCardCoverPlaceholder(
+      coverArea
+    );
+
+  }
+
+
+  const body =
+    document.createElement('div');
+
+  body.className =
+    'issue-body';
+
+
+  const brand =
+    document.createElement('p');
+
+  brand.className =
+    'issue-brand';
+
+  brand.textContent =
+    'MANNA FEAST';
+
+
+  const title =
+    document.createElement('h3');
+
+  title.textContent =
+    issueDate(issue);
+
+
+  const theme =
+    document.createElement('p');
+
+  theme.className =
+    'issue-theme';
+
+  theme.textContent =
+    issue.description || '';
+
+
+  const status =
+    document.createElement('p');
+
+  status.className =
+    'issue-status';
+
+
+  if (issue.pdfAvailable) {
+
+    status.textContent =
+      'Available to read online or download.';
+
+  } else {
+
+    status.textContent =
+      'PDF will be added later.';
+
+  }
+
+
+  const actions =
+    document.createElement('div');
+
+  actions.className =
+    'card-actions';
+
+
+  const read =
+    document.createElement('button');
+
+  read.type =
+    'button';
+
+  read.className =
+    'card-button primary';
+
+  read.textContent =
+    issue.pdfAvailable
+      ? 'Read Online'
+      : 'PDF Not Added';
+
+
+  read.disabled =
+    !issue.pdfAvailable;
+
+
+  read.addEventListener(
+    'click',
+    () => {
+
+      openReader(issue);
+
+    }
+  );
+
+
+  const favorite =
+    document.createElement('button');
+
+  favorite.type =
+    'button';
+
+  favorite.className =
+    'card-button secondary';
+
+  favorite.textContent =
+    isFavorite(issue.key)
+      ? '♥ Saved'
+      : '♡ Favorite';
+
+
+  favorite.addEventListener(
+    'click',
+    () => {
+
+      toggleFavorite(
+        issue.key
+      );
+
+    }
+  );
+
+
+  actions.append(
+    read,
+    favorite
+  );
+
+
+  body.append(
+    brand,
+    title,
+    theme,
+    status,
+    actions
+  );
+
+
+  card.append(
+    coverArea,
+    body
+  );
+
+
+  return card;
+
+}
+
+
+function showCardCoverPlaceholder(
+  container
+) {
+
+  const placeholder =
+    document.createElement('div');
+
+  placeholder.className =
+    'issue-cover-placeholder';
+
+  placeholder.innerHTML =
+    '<span>Manna Feast<br>Cover coming soon</span>';
+
+
+  container.appendChild(
+    placeholder
+  );
+
+}
+
+
+/* =========================================
+   RECENT ISSUES
+   ========================================= */
+
+const recentIssuesGrid =
+  document.getElementById(
+    'recentIssuesGrid'
+  );
+
+
+function renderRecentIssues() {
+
+  if (!recentIssuesGrid) {
+    return;
+  }
+
+
+  recentIssuesGrid.innerHTML =
+    '';
+
+
+  const issues =
+    availableIssues()
+      .slice(0, 6);
+
+
+  issues.forEach(
+    issue => {
+
+      const card =
+        document.createElement('article');
+
+      card.className =
+        'recent-card';
+
+
+      const cover =
+        document.createElement('div');
+
+      cover.className =
+        'recent-cover';
+
+
+      if (issue.coverAvailable) {
+
+        const image =
+          document.createElement('img');
+
+        image.src =
+          issue.cover;
+
+        image.alt =
+          `${issueDate(issue)} Manna Feast cover`;
+
+        cover.appendChild(
+          image
+        );
+
+      }
+
+
+      const copy =
+        document.createElement('div');
+
+      copy.className =
+        'recent-copy';
+
+
+      const strong =
+        document.createElement('strong');
+
+      strong.textContent =
+        issue.month;
+
+
+      const span =
+        document.createElement('span');
+
+      span.textContent =
+        issue.year;
+
+
+      copy.append(
+        strong,
+        span
+      );
+
+
+      card.append(
+        cover,
+        copy
+      );
+
+
+      if (issue.pdfAvailable) {
+
+        card.addEventListener(
+          'click',
+          () => {
+
+            openReader(issue);
+
+          }
+        );
+
+      }
+
+
+      recentIssuesGrid.appendChild(
+        card
+      );
+
+    }
+  );
+
+}
+
+
+/* =========================================
+   LIBRARY
+   ========================================= */
+
+const libraryGrid =
+  document.getElementById(
+    'libraryGrid'
+  );
+
+const libraryEmpty =
+  document.getElementById(
+    'libraryEmpty'
+  );
+
+const librarySearch =
+  document.getElementById(
+    'librarySearch'
+  );
+
+const libraryYear =
+  document.getElementById(
+    'libraryYear'
+  );
+
+const libraryMonth =
+  document.getElementById(
+    'libraryMonth'
+  );
+
+
+function buildLibraryFilters() {
+
+  for (
+    let year = 2026;
+    year >= 2014;
+    year--
+  ) {
+
+    const option =
+      document.createElement('option');
+
+    option.value =
+      year;
+
+    option.textContent =
+      year;
+
+    libraryYear.appendChild(
+      option
+    );
+
+  }
+
+
+  months.forEach(
+    (month, index) => {
+
+      const option =
+        document.createElement('option');
+
+      option.value =
+        index + 1;
+
+      option.textContent =
+        month;
+
+      libraryMonth.appendChild(
+        option
+      );
+
+    }
+  );
+
+}
+
+
+function renderLibrary() {
+
+  if (!libraryGrid) {
+    return;
+  }
+
+
+  const query =
+    librarySearch.value
+      .trim()
+      .toLowerCase();
+
+  const year =
+    libraryYear.value;
+
+  const month =
+    libraryMonth.value;
+
+
+  const results =
+    availableIssues()
+      .filter(
+        issue => {
+
+          const searchable =
+            [
+              issue.title,
+              issue.month,
+              issue.year,
+              issue.description
+            ]
+              .join(' ')
+              .toLowerCase();
+
+
+          const matchesSearch =
+            !query ||
+            searchable.includes(
+              query
+            );
+
+
+          const matchesYear =
+            !year ||
+            String(issue.year) ===
+              year;
+
+
+          const matchesMonth =
+            !month ||
+            String(issue.monthNumber) ===
+              month;
+
+
+          return (
+            matchesSearch &&
+            matchesYear &&
+            matchesMonth
+          );
+
+        }
+      );
+
+
+  libraryGrid.innerHTML =
+    '';
+
+
+  results.forEach(
+    issue => {
+
+      libraryGrid.appendChild(
+        createIssueCard(issue)
+      );
+
+    }
+  );
+
+
+  libraryEmpty.classList.toggle(
+    'hidden',
+    results.length !== 0
+  );
+
+}
+
+
+if (librarySearch) {
+
+  librarySearch.addEventListener(
+    'input',
+    renderLibrary
+  );
+
+  libraryYear.addEventListener(
+    'change',
+    renderLibrary
+  );
+
+  libraryMonth.addEventListener(
+    'change',
+    renderLibrary
+  );
+
+}
+
+
+/* =========================================
+   ARCHIVE
+   ========================================= */
+
+const archiveYears =
+  document.getElementById(
+    'archiveYears'
+  );
+
+
+function renderArchive() {
+
+  if (!archiveYears) {
+    return;
+  }
+
+
+  archiveYears.innerHTML =
+    '';
+
+
+  for (
+    let year = 2026;
+    year >= 2014;
+    year--
+  ) {
+
+    const issues =
+      availableIssues()
+        .filter(
+          issue =>
+            issue.year === year
+        );
+
+
+    const yearBox =
+      document.createElement('section');
+
+    yearBox.className =
+      'archive-year';
+
+
+    const button =
+      document.createElement('button');
+
+    button.type =
+      'button';
+
+    button.className =
+      'archive-year-button';
+
+
+    button.innerHTML =
+      `
+      <strong>${year}</strong>
+      <span>
+        ${
+          issues.length
+            ? `${issues.length} available issue${issues.length === 1 ? '' : 's'}`
+            : 'No issues added yet'
+        }
+      </span>
+      `;
+
+
+    const content =
+      document.createElement('div');
+
+    content.className =
+      'archive-year-content';
+
+
+    if (issues.length) {
+
+      const monthsGrid =
+        document.createElement('div');
+
+      monthsGrid.className =
+        'archive-months';
+
+
+      issues.forEach(
+        issue => {
+
+          const monthBox =
+            document.createElement('div');
+
+          monthBox.className =
+            'archive-month';
+
+
+          monthBox.innerHTML =
+            `
+            <strong>
+              ${issue.month}
+            </strong>
+
+            <span>
+              ${
+                issue.description ||
+                'Manna Feast'
+              }
+            </span>
+            `;
+
+
+          if (issue.pdfAvailable) {
+
+            monthBox.style.cursor =
+              'pointer';
+
+
+            monthBox.addEventListener(
+              'click',
+              () => {
+
+                openReader(issue);
+
+              }
+            );
+
+          }
+
+
+          monthsGrid.appendChild(
+            monthBox
+          );
+
+        }
+      );
+
+
+      content.appendChild(
+        monthsGrid
+      );
+
+    } else {
+
+      content.innerHTML =
+        `
+        <p class="issue-status">
+          Publications for this year can be added later.
+        </p>
+        `;
+
+    }
+
+
+    button.addEventListener(
+      'click',
+      () => {
+
+        yearBox.classList.toggle(
+          'open'
+        );
+
+      }
+    );
+
+
+    yearBox.append(
+      button,
+      content
+    );
+
+
+    archiveYears.appendChild(
+      yearBox
+    );
+
+  }
+
+}
+
+
+/* =========================================
+   SEARCH
+   ========================================= */
+
+const searchPageForm =
+  document.getElementById(
+    'searchPageForm'
+  );
+
+const searchPageInput =
+  document.getElementById(
+    'searchPageInput'
+  );
+
+const searchResults =
+  document.getElementById(
+    'searchResults'
+  );
+
+const searchEmpty =
+  document.getElementById(
+    'searchEmpty'
+  );
+
+
+function runSearch(query) {
+
+  query =
+    query
+      .trim()
+      .toLowerCase();
+
+
+  searchResults.innerHTML =
+    '';
+
+
+  if (!query) {
+
+    searchEmpty.classList.remove(
+      'hidden'
+    );
+
+    searchEmpty.querySelector('h3')
+      .textContent =
+      'Enter a search';
+
+    searchEmpty.querySelector('p')
+      .textContent =
+      'Search by month, year or monthly theme.';
+
+    return;
+
+  }
+
+
+  const results =
+    availableIssues()
+      .filter(
+        issue => {
+
+          const searchable =
+            [
+              issue.title,
+              issue.month,
+              issue.year,
+              issue.description
+            ]
+              .join(' ')
+              .toLowerCase();
+
+
+          return searchable.includes(
+            query
+          );
+
+        }
+      );
+
+
+  results.forEach(
+    issue => {
+
+      searchResults.appendChild(
+        createIssueCard(issue)
+      );
+
+    }
+  );
+
+
+  searchEmpty.classList.toggle(
+    'hidden',
+    results.length !== 0
+  );
+
+
+  if (!results.length) {
+
+    searchEmpty.querySelector('h3')
+      .textContent =
+      'No results found';
+
+    searchEmpty.querySelector('p')
+      .textContent =
+      'Try another month, year or keyword.';
+
+  }
+
+}
+
+
+if (searchPageForm) {
+
+  searchPageForm.addEventListener(
+    'submit',
+    event => {
+
+      event.preventDefault();
+
+      runSearch(
+        searchPageInput.value
+      );
+
+    }
+  );
+
+}
+
+
+/* HOME + TOP SEARCH */
+
+function sendToSearch(query) {
+
+  searchPageInput.value =
+    query;
+
+  window.location.hash =
+    'search';
+
+  runSearch(query);
+
+}
+
+
+const homeSearchForm =
+  document.getElementById(
+    'homeSearchForm'
+  );
+
+const homeSearchInput =
+  document.getElementById(
+    'homeSearchInput'
+  );
+
+
+if (homeSearchForm) {
+
+  homeSearchForm.addEventListener(
+    'submit',
+    event => {
+
+      event.preventDefault();
+
+      sendToSearch(
+        homeSearchInput.value
+      );
+
+    }
+  );
+
+}
+
+
+const globalSearchForm =
+  document.getElementById(
+    'globalSearchForm'
+  );
+
+const globalSearchInput =
+  document.getElementById(
+    'globalSearchInput'
+  );
+
+
+if (globalSearchForm) {
+
+  globalSearchForm.addEventListener(
+    'submit',
+    event => {
+
+      event.preventDefault();
+
+      sendToSearch(
+        globalSearchInput.value
+      );
+
+    }
+  );
+
+}
+
+
+/* =========================================
+   FAVORITES PAGE
+   ========================================= */
+
+const favoritesGrid =
+  document.getElementById(
+    'favoritesGrid'
+  );
+
+const favoritesEmpty =
+  document.getElementById(
+    'favoritesEmpty'
+  );
+
+
+function renderFavorites() {
+
+  if (!favoritesGrid) {
+    return;
+  }
+
+
+  const favoriteKeys =
+    getFavorites();
+
+
+  const issues =
+    favoriteKeys
+      .map(findIssue)
+      .filter(Boolean);
+
+
+  favoritesGrid.innerHTML =
+    '';
+
+
+  issues.forEach(
+    issue => {
+
+      favoritesGrid.appendChild(
+        createIssueCard(issue)
+      );
+
+    }
+  );
+
+
+  favoritesEmpty.classList.toggle(
+    'hidden',
+    issues.length !== 0
+  );
+
+}
+
+
+/* =========================================
+   READING
+   ========================================= */
+
+const readingEmpty =
+  document.getElementById(
+    'readingEmpty'
+  );
+
+const readerShell =
+  document.getElementById(
+    'readerShell'
+  );
+
+const readerTitle =
+  document.getElementById(
+    'readerTitle'
+  );
+
+const readerTheme =
+  document.getElementById(
+    'readerTheme'
+  );
+
+const pdfReader =
+  document.getElementById(
+    'pdfReader'
+  );
+
+const readerFavoriteButton =
+  document.getElementById(
+    'readerFavoriteButton'
+  );
+
+
+let currentReadingIssue =
+  null;
+
+
+function openReader(issue) {
+
+  if (
+    !issue ||
+    !issue.pdfAvailable
+  ) {
+
+    return;
+
+  }
+
+
+  currentReadingIssue =
+    issue;
+
+
+  localStorage.setItem(
+    'mannaLastRead',
+    issue.key
+  );
+
+
+  readerTitle.textContent =
+    issueDate(issue);
+
+
+  readerTheme.textContent =
+    issue.description || '';
+
+
+  pdfReader.src =
+    issue.pdf;
+
+
+  readingEmpty.classList.add(
+    'hidden'
+  );
+
+
+  readerShell.classList.remove(
+    'hidden'
+  );
+
+
+  updateReaderFavoriteButton();
+
+
+  window.location.hash =
+    'reading';
+
+}
+
+
+function loadLastReading() {
+
+  const key =
+    localStorage.getItem(
+      'mannaLastRead'
+    );
+
+
+  const issue =
+    findIssue(key);
+
+
+  if (
+    !issue ||
+    !issue.pdfAvailable
+  ) {
+
+    currentReadingIssue =
+      null;
+
+    readerShell.classList.add(
+      'hidden'
+    );
+
+    readingEmpty.classList.remove(
+      'hidden'
+    );
+
+    return;
+
+  }
+
+
+  currentReadingIssue =
+    issue;
+
+
+  readerTitle.textContent =
+    issueDate(issue);
+
+
+  readerTheme.textContent =
+    issue.description || '';
+
+
+  pdfReader.src =
+    issue.pdf;
+
+
+  readingEmpty.classList.add(
+    'hidden'
+  );
+
+
+  readerShell.classList.remove(
+    'hidden'
+  );
+
+
+  updateReaderFavoriteButton();
+
+}
+
+
+function updateReaderFavoriteButton() {
+
+  if (
+    !readerFavoriteButton ||
+    !currentReadingIssue
+  ) {
+    return;
+  }
+
+
+  readerFavoriteButton.textContent =
+    isFavorite(
+      currentReadingIssue.key
+    )
+      ? '♥ Saved'
+      : '♡ Favorite';
+
+}
+
+
+if (readerFavoriteButton) {
+
+  readerFavoriteButton.addEventListener(
+    'click',
+    () => {
+
+      if (currentReadingIssue) {
+
+        toggleFavorite(
+          currentReadingIssue.key
+        );
+
+      }
+
+    }
+  );
+
+}
+
+
+/* =========================================
+   DOWNLOAD
+   ========================================= */
+
+function downloadIssue(issue) {
+
+  if (
+    !issue ||
+    !issue.pdfAvailable
+  ) {
+    return;
+  }
+
+
+  const link =
+    document.createElement('a');
+
+
+  link.href =
+    issue.pdf;
+
+
+  link.download =
+    `manna-feast-${issue.month.toLowerCase()}-${issue.year}.pdf`;
+
+
+  document.body.appendChild(
+    link
+  );
+
+
+  link.click();
+
+  link.remove();
+
+}
+
+
+/* =========================================
+   READING SETTINGS
+   ========================================= */
+
+const themeButtons =
+  document.querySelectorAll(
+    '[data-theme]'
+  );
+
+const fontButtons =
+  document.querySelectorAll(
+    '[data-font]'
+  );
+
+
+function applyTheme(theme) {
+
+  const themes = [
+    'forest',
+    'cream',
+    'blue',
+    'navy',
+    'burgundy',
+    'gold'
+  ];
+
+
+  themes.forEach(
+    name => {
+
+      document.body.classList.remove(
+        `theme-${name}`
+      );
+
+    }
+  );
+
+
+  document.body.classList.add(
+    `theme-${theme}`
+  );
+
+
+  localStorage.setItem(
+    'mannaTheme',
+    theme
+  );
+
+
+  themeButtons.forEach(
+    button => {
+
+      button.classList.toggle(
+        'active',
+        button.dataset.theme === theme
+      );
+
+    }
+  );
+
+}
+
+
+function applyFontSize(size) {
+
+  [
+    'small',
+    'normal',
+    'large'
+  ]
+    .forEach(
+      name => {
+
+        document.body.classList.remove(
+          `font-${name}`
+        );
+
+      }
+    );
+
+
+  document.body.classList.add(
+    `font-${size}`
+  );
+
+
+  localStorage.setItem(
+    'mannaFontSize',
+    size
+  );
+
+
+  fontButtons.forEach(
+    button => {
+
+      button.classList.toggle(
+        'active',
+        button.dataset.font === size
+      );
+
+    }
+  );
+
+}
+
+
+themeButtons.forEach(
+  button => {
+
+    button.addEventListener(
+      'click',
+      () => {
+
+        applyTheme(
+          button.dataset.theme
+        );
+
+      }
+    );
+
+  }
+);
+
+
+fontButtons.forEach(
+  button => {
+
+    button.addEventListener(
+      'click',
+      () => {
+
+        applyFontSize(
+          button.dataset.font
+        );
+
+      }
+    );
+
+  }
+);
+
+
+applyTheme(
+  localStorage.getItem(
+    'mannaTheme'
+  ) || 'forest'
+);
+
+
+applyFontSize(
+  localStorage.getItem(
+    'mannaFontSize'
+  ) || 'normal'
+);
+
+
+/* =========================================
+   INITIALIZE WEBSITE
+   ========================================= */
+
+buildLibraryFilters();
+
+renderRecentIssues();
+
+renderLibrary();
+
+renderArchive();
+
+renderFavorites();
+
+readHash();
