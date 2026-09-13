@@ -1819,7 +1819,6 @@ button:disabled {
   }
 }
 
-
 @media (max-width: 860px) {
 
   body.sidebar-collapsed .sidebar,
@@ -1827,10 +1826,20 @@ button:disabled {
     width: 235px;
 
     transform: translateX(-105%);
+
+    z-index: 1000;
+
+    visibility: hidden;
+
+    transition:
+      transform .25s ease,
+      visibility .25s ease;
   }
 
   .sidebar.mobile-open {
     transform: translateX(0);
+
+    visibility: visible;
   }
 
   .sidebar-collapse {
@@ -1838,16 +1847,23 @@ button:disabled {
   }
 
   .sidebar-overlay {
+    display: none;
+
     position: fixed;
     inset: 0;
 
-    z-index: 450;
+    z-index: 900;
 
-    background: rgba(3, 19, 16, .45);
+    background:
+      rgba(3, 19, 16, .48);
   }
 
   .sidebar-overlay.visible {
     display: block;
+  }
+
+  body.menu-open {
+    overflow: hidden;
   }
 
   body.sidebar-collapsed .top-header,
@@ -1862,6 +1878,8 @@ button:disabled {
 
   .menu-button {
     display: block;
+
+    flex: 0 0 auto;
   }
 
   .top-ministry-name {
@@ -1871,6 +1889,8 @@ button:disabled {
 
   .top-ministry-name strong {
     font-size: 13px;
+
+    line-height: 1.25;
   }
 
   .top-ministry-name span {
@@ -1913,11 +1933,11 @@ button:disabled {
 
   .reader-toolbar {
     align-items: flex-start;
+
     flex-direction: column;
   }
 
 }
-
 
 @media (max-width: 600px) {
 

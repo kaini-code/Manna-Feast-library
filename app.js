@@ -630,48 +630,56 @@ const collapseButton =
 
 
 function openMobileSidebar() {
+  if (!sidebar) return;
 
   sidebar.classList.add('mobile-open');
 
-  sidebarOverlay.classList.add('visible');
+  if (sidebarOverlay) {
+    sidebarOverlay.classList.add('visible');
+  }
 
+  document.body.classList.add('menu-open');
 }
 
 
 function closeMobileSidebar() {
+  if (!sidebar) return;
 
   sidebar.classList.remove('mobile-open');
 
-  sidebarOverlay.classList.remove('visible');
+  if (sidebarOverlay) {
+    sidebarOverlay.classList.remove('visible');
+  }
 
+  document.body.classList.remove('menu-open');
 }
 
 
 if (menuButton) {
+  menuButton.addEventListener('click', function () {
 
-  menuButton.addEventListener(
-    'click',
-    openMobileSidebar
-  );
+    if (sidebar.classList.contains('mobile-open')) {
+      closeMobileSidebar();
+    } else {
+      openMobileSidebar();
+    }
 
+  });
 }
 
 
 if (sidebarOverlay) {
-
   sidebarOverlay.addEventListener(
     'click',
     closeMobileSidebar
   );
-
 }
 
 
 if (collapseButton) {
-
   collapseButton.addEventListener(
     'click',
-    () => {
+    function () {
 
       document.body.classList.toggle(
         'sidebar-collapsed'
@@ -686,7 +694,6 @@ if (collapseButton) {
 
     }
   );
-
 }
 
 
@@ -695,11 +702,9 @@ if (
     'mannaSidebarCollapsed'
   ) === 'true'
 ) {
-
   document.body.classList.add(
     'sidebar-collapsed'
   );
-
 }
 
 
@@ -716,17 +721,14 @@ function showPage(pageName) {
     'about'
   ];
 
-
   if (!validPages.includes(pageName)) {
-
     pageName = 'home';
-
   }
 
 
   document
     .querySelectorAll('.app-page')
-    .forEach(page => {
+    .forEach(function (page) {
 
       page.classList.toggle(
         'active-page',
@@ -738,7 +740,7 @@ function showPage(pageName) {
 
   document
     .querySelectorAll('[data-nav]')
-    .forEach(link => {
+    .forEach(function (link) {
 
       link.classList.toggle(
         'active',
@@ -750,22 +752,61 @@ function showPage(pageName) {
 
   closeMobileSidebar();
 
-  window.scrollTo({
-    top: 0,
-    behavior: 'instant'
-  });
+  window.scrollTo(0, 0);
 
 
   if (pageName === 'favorites') {
     renderFavorites();
   }
 
-
   if (pageName === 'reading') {
     loadLastReading();
   }
-
 }
+
+
+/*
+  IMPORTANT:
+  Handle sidebar taps directly.
+  This makes navigation much more reliable
+  on phones instead of depending only on
+  the browser's hashchange event.
+*/
+
+document
+  .querySelectorAll('[data-nav]')
+  .forEach(function (link) {
+
+    link.addEventListener(
+      'click',
+      function (event) {
+
+        event.preventDefault();
+
+        const pageName =
+          link.dataset.nav;
+
+        if (!pageName) return;
+
+        if (
+          window.location.hash !==
+          '#' + pageName
+        ) {
+
+          history.pushState(
+            null,
+            '',
+            '#' + pageName
+          );
+
+        }
+
+        showPage(pageName);
+
+      }
+    );
+
+  });
 
 
 function readHash() {
@@ -778,12 +819,17 @@ function readHash() {
   showPage(
     page || 'home'
   );
-
 }
 
 
 window.addEventListener(
   'hashchange',
+  readHash
+);
+
+
+window.addEventListener(
+  'popstate',
   readHash
 );
 
@@ -2167,57 +2213,86 @@ function openReader(issue) {
     return;
   }
 
+
   currentReadingIssue = issue;
+
 
   localStorage.setItem(
     'mannaLastRead',
     issue.key
   );
 
+
+  /*
+    PHONES:
+    Open the PDF itself.
+
+    Using location.href is more reliable
+    on mobile than window.open(), which
+    some phone browsers block.
+  */
+
   const isMobile =
-    window.innerWidth <= 860;
+    window.matchMedia(
+      '(max-width: 860px)'
+    ).matches;
+
 
   if (isMobile) {
 
-    window.open(
-      issue.pdf,
-      '_blank'
-    );
+    window.location.href =
+      issue.pdf;
 
     return;
   }
 
+
+  /*
+    LAPTOP / DESKTOP:
+    Continue using the built-in reader.
+  */
+
   readerTitle.textContent =
     issueDate(issue);
+
 
   readerTheme.textContent =
     issue.description || '';
 
+
   pdfReader.src =
     issue.pdf;
+
 
   readingEmpty.classList.add(
     'hidden'
   );
 
+
   readerShell.classList.remove(
     'hidden'
   );
 
-  updateReaderFavoriteButton();
-
-  window.location.hash =
-    'reading';
-}
 
   updateReaderFavoriteButton();
 
 
-  window.location.hash =
-    'reading';
+  if (
+    window.location.hash !==
+    '#reading'
+  ) {
 
+    history.pushState(
+      null,
+      '',
+      '#reading'
+    );
+
+  }
+
+
+  showPage('reading');
 }
-
 
 function loadLastReading() {
 
