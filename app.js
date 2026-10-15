@@ -49,6 +49,7 @@ const issueThemes = {
   '2026-07': 'The Month of CREDIBILITY AND REST',
   '2026-08': 'The Month of MEDIATION',
   '2026-09': 'The Month of TERRITORIAL ENLARGEMENT',
+  '2026-10': 'The Month of INGNITING THE FIRE OF THE HOLY SPIRIT',
 
   '2025-01': 'The Month of ',
   '2025-02': 'The Month of ',
@@ -169,44 +170,44 @@ const issueThemes = {
   '2017-12': 'The Month of ',
   
 
-  '2016-02': 'The Month of ',
-  '2016-03': 'The Month of ',
-  '2016-04': 'The Month of ',
-  '2016-05': 'The Month of ',
-  '2016-06': 'The Month of ',
-  '2016-07': 'The Month of ',
-  '2016-08': 'The Month of ',
-  '2016-09': 'The Month of Renewal and Lifting',
-  '2016-10': 'The Month of ',
-  '2016-11': 'The Month of ',
+  '2016-02': 'The Month to Be on Guard ',
+  '2016-03': 'The Month of Divine Influence and Announcement',
+  '2016-04': 'The Month of Raising Kingdom Staandards',
+  '2016-05': 'The Month to Conquer',
+  '2016-06': 'The Month of Unlimited Fruitfulness',
+  '2016-07': 'The Month of Gods Wonders',
+  '2016-08': 'The Month of Renewal and Lifting',
+  '2016-09': 'The Month to Overtake',
+  '2016-10': 'The Month ',
+  '2016-11': 'The Month to Mount Up in Dominion',
   '2016-12': 'The Month of ',
   
 
   '2015-01': 'The Month of Sighting your Horizon',
   '2015-02': 'The Month of ',
-  '2015-03': 'The Month of ',
+  '2015-03': 'The Month of Glorious Triumph',
   '2015-04': 'The Month of Fruitfulness',
-  '2015-05': 'The Month of ',
-  '2015-06': 'The Month of ',
+  '2015-05': 'The Month of Grace for Exploit',
+  '2015-06': 'The Month to Arise and Run with the Vision',
   '2015-07': 'The Month of ',
   '2015-08': 'The Month of Divine Compensation',
   '2015-09': 'The Month of ',
-  '2015-10': 'The Month of ',
-  '2015-11': 'The Month of ',
-  '2015-12': 'The Month of ',
+  '2015-10': 'The Month of Survey and Take Over',
+  '2015-11': 'The Month to Ride with the Chariots of Fire',
+  '2015-12': 'The Month of Grace and Fulfillment',
   
 
   
   '2014-02': 'The Month of Divine Shower',
   '2014-03': 'The Month of ',
-  '2014-04': 'The Month of ',
-  '2014-05': 'The Month of ',
-  '2014-06': 'The Month of ',
+  '2014-04': 'The Month of Harvest ',
+  '2014-05': 'The Month to Set the Banquet ',
+  '2014-06': 'The Month of Gaining New Grounds',
   '2014-07': 'The Month of Advancing in Value',
-  '2014-08': 'The Month of ',
-  '2014-09': 'The Month of ',
-  '2014-10': 'The Month of ',
-  '2014-11': 'The Month of ',
+  '2014-08': 'The Month of Beauty for Ashes ',
+  '2014-09': 'The Month of Glory to Glory',
+  '2014-10': 'The Month of Maximising Grace',
+  '2014-11': 'The Month of  ',
   '2014-12': 'The Month of ',
   
 
@@ -234,6 +235,7 @@ const coverIssueKeys = [
   '2026-07',
   '2026-08',
   '2026-09',
+  '2026-10',
 
   '2025-01',
   '2025-02',
@@ -395,6 +397,44 @@ const coverIssueKeys = [
 
 const pdfIssueKeys = [
 
+  '2016-01',
+  '2016-02',
+  '2016-03',
+  '2016-04',
+  '2016-05',
+  '2016-06',
+  '2016-07',
+  '2016-08',
+  '2016-09',
+  '2016-10',
+  '2016-11',
+  '2016-12',
+  
+  '2015-01',
+  '2015-02',
+  '2015-03',
+  '2015-04',
+  '2015-05',
+  '2015-06',
+  '2015-07',
+  '2015-08',
+  '2015-09',
+  '2015-10',
+  '2015-11',
+  '2015-12',
+
+  '2014-02',
+  '2014-03',
+  '2014-04',
+  '2014-05',
+  '2014-06',
+  '2014-07',
+  '2014-08',
+  '2014-09',
+  '2014-10',
+  '2014-11',
+  '2014-12',
+  
   '2026-01',
   '2026-03',
   '2026-04',
@@ -403,12 +443,14 @@ const pdfIssueKeys = [
   '2026-07',
   '2026-08',
   '2026-09',
-
+  '2026-10',
+  
   '2025-04',
   '2025-05',
   '2025-06',
   '2025-09',
-  '2025-11'
+  '2025-11',
+  
 
 ];
 
@@ -430,7 +472,7 @@ for (let year = 2026; year >= 2014; year--) {
 
   const monthLimit =
     year === 2026
-      ? 9
+      ? 10
       : 12;
 
 
